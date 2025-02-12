@@ -13,7 +13,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="150dp"
         android:text="Login"
         android:textColor="@color/black"
         android:textSize="28sp"
@@ -24,7 +24,6 @@
 
     <!-- Subtitle -->
 
-    <!-- Email Input -->
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
@@ -37,6 +36,9 @@
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <!-- Email Input -->
+
 
     <EditText
         android:id="@+id/etEmail"
@@ -75,10 +77,6 @@
 
     <!-- Forgot Password -->
 
-    <!-- Login Button -->
-
-    <!-- Sign Up Option -->
-
     <TextView
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
@@ -91,6 +89,9 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+
+    <!-- Login Button -->
 
     <Button
         android:id="@+id/btnLogin"
@@ -107,11 +108,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
 
+
+    <!-- Dont have an account -->
+
     <TextView
         android:id="@+id/tvNoAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="230dp"
         android:text="Don't have an account?"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -119,6 +123,9 @@
         app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+
+    <!-- Sign Up Option -->
 
     <TextView
         android:id="@+id/tvSignUp"

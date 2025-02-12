@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UpdateProfileActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/ProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Update Your Profile"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Full Name -->
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="Enter Full Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ProfileTitle" />
+
+    <!-- Guardian Number -->
+    <EditText
+        android:id="@+id/etGuardian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="Guardian number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFullName" />
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etGuardian" />
+
+    <!-- Institute -->
+    <EditText
+        android:id="@+id/etInstitute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="Institute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <!-- Gender -->
+    <EditText
+        android:id="@+id/etGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="Gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etInstitute" />
+
+    <!-- SSC Board -->
+    <EditText
+        android:id="@+id/etSSCBoard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="SSC BOARD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etGender" />
+
+    <!-- SSC Year -->
+    <EditText
+        android:id="@+id/etSSCYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="SSC YEAR"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSSCBoard" />
+
+    <!-- HSC Roll -->
+    <EditText
+        android:id="@+id/etHSCroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="HSC ROLL"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSSCYear" />
+
+    <!-- HSC Board -->
+    <EditText
+        android:id="@+id/etHSCBoard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="HSC BOARD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etHSCroll" />
+
+    <!-- HSC Year -->
+
+    <EditText
+        android:id="@+id/etHSCYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:inputType="number"
+        android:text="HSC YEAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etHSCBoard" />
+
+    <!-- Update Button -->
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="#FF9800"
+        android:text="Update"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etHSCYear" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
