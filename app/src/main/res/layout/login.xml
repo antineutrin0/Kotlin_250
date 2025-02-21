@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <!-- Title -->
     <TextView
@@ -47,8 +47,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="40dp"
         android:hint="Email"
-        android:drawableStart="@drawable/ic_email"
-        android:background="@drawable/input_background"
+
         android:paddingStart="16dp"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -65,8 +64,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:hint="Password"
-        android:drawableStart="@drawable/ic_password"
-        android:background="@drawable/input_background"
+
         android:paddingStart="16dp"
         android:textColor="@color/black"
         android:textSize="16sp"
