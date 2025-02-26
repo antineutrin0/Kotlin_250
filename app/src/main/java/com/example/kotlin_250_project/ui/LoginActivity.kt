@@ -42,6 +42,9 @@ class LoginActivity : AppCompatActivity() {
         binding.tvSignUp.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
         }
+        binding.btnBack.setOnClickListener {
+            startActivity(Intent(this, WelcomeActivity::class.java))
+        }
     }
 
     // Sign in user using Firebase Authentication

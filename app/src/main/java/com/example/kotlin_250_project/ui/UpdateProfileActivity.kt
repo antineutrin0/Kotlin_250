@@ -43,7 +43,6 @@ class UpdateProfileActivity : AppCompatActivity() {
         sscBoard: String, sscYear: String
     ) {
         // Here, you can update the profile in your database or API
-
         // For now, we just show a success message
         Toast.makeText(this, "Profile updated successfully!", Toast.LENGTH_SHORT).show()
 
