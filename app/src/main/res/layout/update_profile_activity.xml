@@ -169,20 +169,61 @@
             android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Update Button -->
+    <!-- HSC Board -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hscBoardLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="HSC Board"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/sscYearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHSCBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- HSC Year -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hscYearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="HSC Year"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/hscBoardLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHSCYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@android:color/black"
         android:text="Update"
-        android:textStyle="bold"
         android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/hscYearLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sscYearLayout" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
