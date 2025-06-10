@@ -33,7 +33,11 @@ class SignupActivity : AppCompatActivity() {
 
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
-            } else {
+            }
+            else if(password.length<8)
+                Toast.makeText(this, "password must be more then equal to 8 character", Toast.LENGTH_SHORT).show()
+
+            else {
                 signUpUser(email, password)
             }
         }

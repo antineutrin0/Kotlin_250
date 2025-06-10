@@ -12,7 +12,8 @@ class LoginActivity : AppCompatActivity() {
 
     // Firebase Authentication instance
     private lateinit var mAuth: FirebaseAuth
-
+    var ischaracter=0;
+    var i=0;
     // View Binding instance
     private lateinit var binding: LoginBinding
 
@@ -33,7 +34,9 @@ class LoginActivity : AppCompatActivity() {
 
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
-            } else {
+
+            }
+            else {
                 signInUser(email, password)
             }
         }
@@ -54,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user = mAuth.currentUser
                     Toast.makeText(baseContext, "Welcome ${user?.email}", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, UpdateProfileActivity::class.java)
+                    val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {

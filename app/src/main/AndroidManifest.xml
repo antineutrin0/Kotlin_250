@@ -36,6 +36,18 @@
         <activity
             android:name=".ui.UpdateProfileActivity"
             android:exported="true" />
+        <activity
+            android:name=".ui.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.BookmarkActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.ExamActivity"
+            android:exported="true" />
 
     </application>
 
