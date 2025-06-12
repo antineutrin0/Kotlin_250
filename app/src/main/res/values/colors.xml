@@ -3,6 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="nav_item_color">#FF9800</color>
+    <color name="green_primary">#4CAF50</color>
+    <color name="purple">#7B1FA2</color>
 </resources>
 
 

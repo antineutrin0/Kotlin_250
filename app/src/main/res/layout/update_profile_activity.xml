@@ -218,7 +218,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@android:color/black"
+        android:backgroundTint="#FF9800"
         android:text="Update"
         android:textColor="@android:color/white"
         android:textStyle="bold"
