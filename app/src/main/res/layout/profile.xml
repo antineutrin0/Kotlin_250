@@ -5,18 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".ui.ProfileActivity"
+    >
 
     <!-- Top Header -->
+
+    <!-- Main Content -->
     <LinearLayout
         android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@drawable/purple_header_background"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <TextView
             android:id="@+id/profileTitle"
@@ -45,7 +50,6 @@
 
     </LinearLayout>
 
-    <!-- Main Content -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -146,7 +150,8 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Add it maharaj"
+                                    android:id="@+id/etinstitute"
+                                    android:text="N/A"
                                     android:textColor="@android:color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
@@ -186,7 +191,8 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Add it Maharaj"
+                                    android:id="@+id/number"
+                                    android:text="N/A"
                                     android:textColor="@android:color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
