@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="exam_types">
+        <item>Final_Exam</item>
+        <item>Mid_Term</item>
+        <item>Unit_Test</item>
+    </string-array>
+</resources>
