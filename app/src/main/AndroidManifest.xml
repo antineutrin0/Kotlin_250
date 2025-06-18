@@ -15,8 +15,7 @@
         android:theme="@style/Theme.Kotlin_250_Project">
 
         <!-- Welcome Activity set as the launcher activity -->
-        <activity
-            android:name=".ui.WelcomeActivity"
+        <activity android:name=".ui.HomeScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +23,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Login Activity -->
         <activity
             android:name=".ui.LoginActivity"
             android:exported="true" />
@@ -36,21 +34,17 @@
         <activity
             android:name=".ui.UpdateProfileActivity"
             android:exported="true" />
+
         <activity
-            android:name=".ui.HomeActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.ProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.BookmarkActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.ExamActivity"
+            android:name=".ui.BookmarkFragment"
             android:exported="true" />
         <activity
             android:name=".ui.NotificationActivity"
             android:exported="true" />
+        <activity
+            android:name=".ui.ResultActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

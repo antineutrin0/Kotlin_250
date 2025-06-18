@@ -376,7 +376,7 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-             <!-- card number 6 -->
+            <!-- card number 6 -->
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/classCard6"
@@ -457,7 +457,7 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="24dp">
-
+                    A
                     <TextView
                         android:id="@+id/cardTitle7"
                         android:layout_width="wrap_content"
@@ -495,16 +495,5 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/search_background"
-        android:elevation="8dp"
-        app:itemIconTint="@color/nav_item_color"
-        app:itemTextColor="@color/nav_item_color"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/botttom_nav_menu"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

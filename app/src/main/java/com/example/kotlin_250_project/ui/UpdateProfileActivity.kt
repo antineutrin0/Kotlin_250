@@ -83,7 +83,7 @@ class UpdateProfileActivity : AppCompatActivity() {
             .set(userProfile)
             .addOnSuccessListener {
                 Toast.makeText(this, "Profile updated successfully!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, HomeFragment::class.java)
                 startActivity(intent)
                 finish()
             }
