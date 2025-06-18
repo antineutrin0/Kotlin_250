@@ -48,7 +48,9 @@
         <activity
             android:name=".ui.ExamActivity"
             android:exported="true" />
-
+        <activity
+            android:name=".ui.NotificationActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

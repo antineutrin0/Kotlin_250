@@ -1,5 +1,4 @@
 package com.example.kotlin_250_project.ui
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -31,7 +30,8 @@ class UpdateProfileActivity : AppCompatActivity() {
             val institute = binding.etInstitute.text.toString().trim()
             val profileUrl = binding.etprofileUrl.text.toString().trim()
 
-            // ✅ Get selected gender from RadioGroup
+
+            // Get selected gender from RadioGroup
             val selectedGenderId = binding.genderRadioGroup.checkedRadioButtonId
             val gender = when (selectedGenderId) {
                 R.id.rbMale -> "Male"
@@ -52,6 +52,9 @@ class UpdateProfileActivity : AppCompatActivity() {
                 // Call function to update profile in Firestore
                 updateProfile(fullName, number, email, institute, profileUrl, gender, sscBoard, sscYear, hscBoard, hscYear)
             }
+        }
+        binding.btnBack.setOnClickListener {
+            finish() // Finishes current activity and returns to previous one
         }
     }
 
