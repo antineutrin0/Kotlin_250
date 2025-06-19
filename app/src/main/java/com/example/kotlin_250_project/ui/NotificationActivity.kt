@@ -53,9 +53,21 @@ class NotificationActivity : AppCompatActivity() {
 
     private fun getDummyNotifications(): List<NotificationModel> {
         return listOf(
-//            NotificationModel("New Feature Released", "Check out the new version 2.1", "2 min ago", false, "ℹ️"),
-//            NotificationModel("Reminder", "You have a pending task", "10 min ago", true, "🔔"),
-//            NotificationModel("Security Alert", "Login from new device", "1 hr ago", false, "⚠️")
+            NotificationModel("New Feature Released", "Check out the new version 2.1", "2 min ago", false, "ℹ️"),
+            NotificationModel("Reminder", "You have a pending task", "10 min ago", true, "🔔"),
+            NotificationModel("Security Alert", "Login from new device", "1 hr ago", false, "⚠️"),
+            NotificationModel("New Feature Released", "Check out the new version 2.1", "2 min ago", false, "ℹ️"),
+            NotificationModel("Reminder", "You have a pending task", "10 min ago", true, "🔔"),
+            NotificationModel("Security Alert", "Login from new device", "1 hr ago", false, "⚠️"),
+            NotificationModel("New Feature Released", "Check out the new version 2.1", "2 min ago", false, "ℹ️"),
+            NotificationModel("Reminder", "You have a pending task", "10 min ago", true, "🔔"),
+            NotificationModel("Security Alert", "Login from new device", "1 hr ago", false, "⚠️"),
+            NotificationModel("New Feature Released", "Check out the new version 2.1", "2 min ago", false, "ℹ️"),
+            NotificationModel("Reminder", "You have a pending task", "10 min ago", true, "🔔"),
+            NotificationModel("Security Alert", "Login from new device", "1 hr ago", false, "⚠️")
+
+
+
         )
     }
 }
