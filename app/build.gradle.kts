@@ -14,7 +14,6 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -27,13 +26,16 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         viewBinding = true
     }
@@ -46,16 +48,19 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // ✅ Use Firebase BOM to manage all Firebase dependencies
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0")) // Use latest version
-
-    // Firebase services (version will be managed by BOM)
+    // Firebase BOM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
-    implementation ("com.google.android.material:material:1.8.0")
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
 
-    // Testing dependencies
+    // Material & Glide
+    implementation("com.google.android.material:material:1.8.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // MPAndroidChart for performance graph
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
