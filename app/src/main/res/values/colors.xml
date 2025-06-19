@@ -29,6 +29,33 @@
     <color name="read_more_color">#3498db</color>
     <color name="unread_background">#e8f4ff</color>
 
+    <!-- Brand Colors -->
+    <color name="primary_orange">#FFA726</color>
+    <color name="light_orange">#FFCC80</color>
+    <color name="nav_item_color">#FF5722</color>
+    <color name="card_border">#E0E0E0</color>
+    <color name="ripple_color">#22000000</color>
+    <color name="progress_background">#F1F1F1</color>
+
+    <!-- Subject Colors -->
+    <color name="math_color">#1E88E5</color>
+    <color name="math_color_light">#BBDEFB</color>
+
+    <color name="physics_color">#6A1B9A</color>
+    <color name="physics_color_light">#CE93D8</color>
+
+    <color name="chemistry_color">#EF6C00</color>
+    <color name="chemistry_color_light">#FFCC80</color>
+
+    <color name="english_color">#388E3C</color>
+    <color name="english_color_light">#C8E6C9</color>
+
+    <color name="goal_color">#F44336</color>
+    <color name="goal_color_light">#FFCDD2</color>
+
+    <color name="assignment_color">#00796B</color>
+    <color name="assignment_color_light">#B2DFDB</color>
+
 </resources>
 
 
