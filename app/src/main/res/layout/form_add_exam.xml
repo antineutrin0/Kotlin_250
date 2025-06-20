@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Subject Name -->
+    <EditText
+        android:id="@+id/et_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject (e.g., Mathematics)"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:inputType="text" />
+
+    <!-- Score -->
+    <EditText
+        android:id="@+id/et_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Score (%)"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:inputType="numberDecimal" />
+
+    <!-- Date -->
+    <EditText
+        android:id="@+id/chapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Chapter"
+        android:focusable="false"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:inputType="date" />
+
+    <!-- Weak Areas -->
+    <EditText
+        android:id="@+id/et_weak_areas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Weak Areas (optional)"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:inputType="text" />
+
+    <!-- Time Spent Studying -->
+    <EditText
+        android:id="@+id/et_study_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Study Time (hours)"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="numberDecimal" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btn_submit_exam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/green_primary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:textStyle="bold" />
+</LinearLayout>
