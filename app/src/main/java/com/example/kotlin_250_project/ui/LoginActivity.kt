@@ -59,7 +59,8 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(baseContext, "Welcome ${user?.email}", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeFragment::class.java)
                     startActivity(intent)
-                    finish()
+
+//                    finish()
                 } else {
                     Log.w("SignInActivity", "signInWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()

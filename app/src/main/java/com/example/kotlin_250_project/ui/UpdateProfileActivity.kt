@@ -91,18 +91,42 @@ class UpdateProfileActivity : AppCompatActivity() {
             "hscYear" to binding.etHSCYear.text.toString()
         )
 
-        firestore.collection("Users").document(userId)
-            .update(updatedData)
-            .addOnSuccessListener {
-                Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+        val userDocRef = firestore.collection("Users").document(userId)
 
-                // Redirect to Profile tab
-                 finish()
-
-
+        // First check if document exists
+        userDocRef.get()
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    // Update existing document
+                    userDocRef.update(updatedData)
+                        .addOnSuccessListener {
+                            Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                            // Optionally redirect or finish
+                            val intent = Intent(this, HomeFragment::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        .addOnFailureListener {
+                            Toast.makeText(this, "Update failed: ${it.message}", Toast.LENGTH_SHORT).show()
+                        }
+                } else {
+                    // Create new document
+                    userDocRef.set(updatedData)
+                        .addOnSuccessListener {
+                            Toast.makeText(this, "Profile created successfully", Toast.LENGTH_SHORT).show()
+                            // Optionally redirect or finish
+                            val intent = Intent(this, HomeFragment::class.java)
+                            startActivity(intent)
+                             finish()
+                        }
+                        .addOnFailureListener {
+                            Toast.makeText(this, "Failed to create profile: ${it.message}", Toast.LENGTH_SHORT).show()
+                        }
+                }
             }
             .addOnFailureListener {
-                Toast.makeText(this, "Update failed: ${it.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Failed to fetch user data: ${it.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
 }
