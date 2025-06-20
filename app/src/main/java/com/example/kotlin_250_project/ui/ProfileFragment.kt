@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import com.example.kotlin_250_project.R
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.kotlin_250_project.databinding.FragmentProfileBinding
@@ -75,6 +77,7 @@ class ProfileFragment : Fragment() {
         binding.logoutLayout.setOnClickListener {
             auth.signOut()
             Toast.makeText(requireContext(), "Logged out successfully", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireContext(), WelcomeActivity::class.java))
             requireActivity().finish()
         }
 

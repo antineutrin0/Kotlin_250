@@ -9,34 +9,55 @@ import com.example.kotlin_250_project.databinding.HomeScreenBinding
 class HomeScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: HomeScreenBinding
+    private var currentFragmentTag: String = "home" // Track which tab is active
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = HomeScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Load default fragment
-        loadFragment(HomeFragment())
+        // Load default fragment (Home)
+        loadFragment(HomeFragment(), "home")
+        binding.bottomNavigation.selectedItemId = R.id.nav_home
 
-        // Use the BottomNavigationView from HomeScreenBinding
         binding.bottomNavigation.setOnItemSelectedListener { item ->
-            val fragment = when (item.itemId) {
-                R.id.nav_home -> HomeFragment()
-                R.id.nav_exam -> ExamFragment()
-                R.id.nav_profile-> ProfileFragment()
-                R.id.nav_bookmark-> BookmarkFragment()
-                else -> null
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    loadFragment(HomeFragment(), "home")
+                    currentFragmentTag = "home"
+                }
+                R.id.nav_exam -> {
+                    loadFragment(ExamFragment(), "exam")
+                    currentFragmentTag = "exam"
+                }
+                R.id.nav_profile -> {
+                    loadFragment(ProfileFragment(), "profile")
+                    currentFragmentTag = "profile"
+                }
+                R.id.nav_bookmark -> {
+                    loadFragment(BookmarkFragment(), "bookmark")
+                    currentFragmentTag = "bookmark"
+                }
             }
-            fragment?.let {
-                loadFragment(it)
-                true
-            } ?: false
+            true
         }
     }
 
-    private fun loadFragment(fragment: Fragment) {
+    private fun loadFragment(fragment: Fragment, tag: String) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.nav_host_fragment, fragment)
+            .replace(R.id.nav_host_fragment, fragment, tag)
             .commit()
+    }
+
+    override fun onBackPressed() {
+        if (currentFragmentTag != "home") {
+            // Go back to home if not already there
+            binding.bottomNavigation.selectedItemId = R.id.nav_home
+            loadFragment(HomeFragment(), "home")
+            currentFragmentTag = "home"
+        } else {
+            // Default back behavior (exit app)
+            super.onBackPressed()
+        }
     }
 }

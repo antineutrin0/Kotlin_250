@@ -229,7 +229,7 @@
     <!-- Floating Purple Header on Top -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="@color/purple"
         android:gravity="center_vertical"
@@ -254,7 +254,7 @@
             android:layout_height="wrap_content"
             android:text="Educational Info"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium" />
     </LinearLayout>

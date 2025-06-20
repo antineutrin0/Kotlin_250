@@ -17,13 +17,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/header_gradient"
-            android:padding="24dp"
+            android:padding="10dp"
             android:gravity="center">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                >
 
                 <ImageView
                     android:id="@+id/backarrow"
@@ -43,19 +45,11 @@
                     android:layout_centerInParent="true"
                     android:text="Progress Card"
                     android:textColor="@android:color/white"
-                    android:textSize="28sp"
+                    android:textSize="24sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
 
             </RelativeLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Track your academic journey"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:alpha="0.9" />
 
         </LinearLayout>
 

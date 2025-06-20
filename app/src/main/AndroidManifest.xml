@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Kotlin_250_Project">
 
         <!-- Welcome Activity set as the launcher activity -->
-        <activity android:name=".ui.HomeScreenActivity"
+        <activity android:name=".ui.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +32,11 @@
         <activity
             android:name=".ui.SignupActivity"
             android:exported="true" />
+
+        <activity android:name=".ui.HomeScreenActivity"
+            android:exported="true" />
+
+
         <activity
             android:name=".ui.UpdateProfileActivity"
             android:exported="true" />
