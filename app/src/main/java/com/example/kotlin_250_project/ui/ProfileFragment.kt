@@ -79,7 +79,7 @@ class ProfileFragment : Fragment() {
         }
 
         binding.educationInfoLayout.setOnClickListener {
-            Toast.makeText(requireContext(), "Education Info Clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireContext(),EducationInfoActivity::class.java))
         }
 
         binding.myresult.setOnClickListener {

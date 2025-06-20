@@ -26,16 +26,16 @@
                 android:layout_marginBottom="16dp">
 
                 <ImageView
-                    android:id="@+id/back_arrow"
+                    android:id="@+id/backarrow"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
                     android:src="@drawable/back_btn"
                     android:contentDescription="Back"
-                    android:tint="@android:color/white"
                     android:clickable="true"
-                    android:focusable="true" />
+                    android:focusable="true"
+                    app:tint="@android:color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"

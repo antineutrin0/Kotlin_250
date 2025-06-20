@@ -48,6 +48,10 @@
             android:exported="true" />
         <activity android:name=".ui.PerformanceGraphActivity"
             android:exported="true"/>
+        <activity android:name=".ui.EducationInfoActivity"
+            android:exported="true" />
+        <activity android:name=".ui.ProgressActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

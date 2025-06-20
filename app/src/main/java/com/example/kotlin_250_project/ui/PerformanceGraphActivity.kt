@@ -1,7 +1,9 @@
 package com.example.kotlin_250_project.ui
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin_250_project.R
@@ -19,12 +21,15 @@ class PerformanceGraphActivity : AppCompatActivity() {
     private lateinit var tabWeek: TextView
     private lateinit var tabMonth: TextView
     private lateinit var performanceSummary: TextView
+    private lateinit var backbtn: ImageView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_performance_graph)
 
         // Initialize views
+        backbtn=findViewById(R.id.backarrow)
         lineChart = findViewById(R.id.performanceChart)
         tabDay = findViewById(R.id.tab_day)
         tabWeek = findViewById(R.id.tab_week)
@@ -39,6 +44,9 @@ class PerformanceGraphActivity : AppCompatActivity() {
             activateTab(tabDay)
             deactivateTabs(tabWeek, tabMonth)
             loadDailyData()
+        }
+        backbtn.setOnClickListener{
+            finish();
         }
 
         tabWeek.setOnClickListener {

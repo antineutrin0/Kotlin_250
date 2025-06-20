@@ -11,16 +11,18 @@
         android:orientation="vertical">
 
         <!-- Page Title -->
+
+        <!-- Grid of Cards -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="Education Info"
-            android:textSize="24sp"
-            android:textStyle="bold"
             android:textColor="@color/nav_item_color"
-            android:layout_marginBottom="16dp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <!-- Grid of Cards -->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,7 +98,7 @@
 
             <!-- 3. Performance Graph -->
             <LinearLayout
-                android:id="@+id/card_graph"
+                android:id="@+id/performancegraph"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
