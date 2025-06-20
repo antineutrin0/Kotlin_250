@@ -39,7 +39,7 @@ class EducationInfoActivity : AppCompatActivity() {
         }
 
         binding.cardNotes.setOnClickListener {
-            // startActivity(Intent(this, NotesActivity::class.java))
+             startActivity(Intent(this, NotesActivity::class.java))
         }
     }
 }

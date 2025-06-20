@@ -36,52 +36,40 @@
         <View
             android:layout_width="40dp"
             android:layout_height="40dp" />
-
     </LinearLayout>
 
-    <!-- Notes List Container -->
-    <ScrollView
+    <!-- Notes List RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/white">
+        android:background="@drawable/edittext_border"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        android:scrollbars="vertical" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <!-- Empty message (conditionally shown) -->
+    <TextView
+        android:id="@+id/emptyMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="No notes yet. Tap + to create your first note!"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:visibility="gone" />
 
-            <LinearLayout
-                android:id="@+id/notesContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" />
-
-            <TextView
-                android:id="@+id/emptyMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No notes yet. Tap + to create your first note!"
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:gravity="center"
-                android:padding="20dp"
-                android:layout_gravity="center" />
-        </FrameLayout>
-    </ScrollView>
-
-
-
-
-
-    <!-- Plus Button -->
+    <!-- Floating Add Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/ic_add"
         android:backgroundTint="@color/nav_item_color"
-        android:id="@+id/fabAddNote"
         android:contentDescription="Add new note" />
-
 </LinearLayout>

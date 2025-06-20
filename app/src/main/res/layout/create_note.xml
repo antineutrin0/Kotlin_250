@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="Save"
             android:textColor="@android:color/white"
-            android:backgroundTint="@color/green_primary"
+            android:backgroundTint="@color/black"
             android:id="@+id/btnSave"
             android:paddingHorizontal="20dp" />
 

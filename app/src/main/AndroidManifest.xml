@@ -57,6 +57,11 @@
             android:exported="true" />
         <activity android:name=".ui.ProgressActivity"
             android:exported="true" />
+        <activity android:name=".ui.NotesActivity"
+            android:exported="true"/>
+        <activity android:name=".ui.NoteDetailActivity"
+            android:exported="true"/>
+
     </application>
 
 </manifest>
