@@ -1,52 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/gradient_background"
-    android:padding="16dp">
+    android:background="@drawable/gradient_background">
 
-    <!-- Header with Back Button -->
+    <!-- Full content area (LinearLayout inside ScrollView) -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="72dp"
+    android:padding="16dp">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back_btn"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
-            android:id="@+id/btnBackAchievements"
-            android:contentDescription="Go back" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Achievements"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:gravity="center" />
-
-        <!-- Spacer to balance the layout -->
-        <View
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
-
-    </LinearLayout>
-
-    <!-- ScrollView Container with White Background -->
+    <!-- Scrollable content area -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
         android:padding="16dp"
         android:layout_marginBottom="16dp">
 
@@ -56,13 +27,12 @@
             android:orientation="vertical"
             android:id="@+id/achievementsContainer">
 
-            <!-- Empty Message -->
+            <!-- Empty message block -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="400dp"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_marginTop="100dp"
                 android:id="@+id/emptyAchievementsLayout">
 
                 <ImageView
@@ -91,61 +61,45 @@
 
             </LinearLayout>
 
-            <!-- Achievement items will be added here dynamically -->
-
-
-            <!-- Sample achievement item structure (hidden by default) -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/achievement_item_background"
-                android:padding="16dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center_vertical"
-                android:visibility="gone"
-                android:id="@+id/sampleAchievementItem">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_achievement_trophy"
-                    android:layout_marginEnd="16dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Achievement Title"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"
-                        android:layout_marginBottom="4dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Achievement description goes here"
-                        android:textSize="14sp"
-                        android:textColor="#666666" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🏆"
-                    android:textSize="24sp"
-                    android:layout_marginStart="8dp" />
-
-            </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
+
+    <!-- Header on top of everything -->
+<LinearLayout
+android:id="@+id/headerLayout"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:orientation="horizontal"
+android:background="@drawable/header_gradient"
+android:paddingStart="16dp"
+android:paddingEnd="16dp"
+android:gravity="center_vertical"
+android:elevation="6dp">
+
+<ImageButton
+    android:id="@+id/btnBackAchievements"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/back_btn"
+    android:background="?android:attr/selectableItemBackgroundBorderless"
+    android:padding="8dp"
+    android:contentDescription="Go back"
+    android:tint="@android:color/white" />
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="Achievements"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textColor="@android:color/white"
+    android:gravity="center" />
+
+<!-- Spacer (optional) -->
+<View
+    android:layout_width="40dp"
+    android:layout_height="40dp" />
+</LinearLayout>
+    </FrameLayout>
