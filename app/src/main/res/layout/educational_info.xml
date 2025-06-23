@@ -121,7 +121,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Performance Graph"
+                            android:text="GTrack"
                             android:textAlignment="center"
                             android:textSize="16sp"
                             android:textStyle="bold"
