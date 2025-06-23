@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin_250_project.R
+import com.google.firebase.Timestamp
+import java.text.SimpleDateFormat
+import java.util.*
 
 class NoteDetailActivity : AppCompatActivity() {
 
@@ -20,11 +23,11 @@ class NoteDetailActivity : AppCompatActivity() {
         descriptionText = findViewById(R.id.tvDetailDescription)
 
         val title = intent.getStringExtra("title")
-        val date = intent.getStringExtra("date")
         val description = intent.getStringExtra("description")
+        val timestamp = intent.getStringExtra("date")
 
         titleText.text = title
-        dateText.text = "Date: $date"
+        dateText.text = "Date: $timestamp"
         descriptionText.text = description
     }
 }
