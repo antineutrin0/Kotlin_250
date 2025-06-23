@@ -4,4 +4,10 @@
         <item>Mid_Term</item>
         <item>Unit_Test</item>
     </string-array>
+    <string-array name="subject_options">
+        <item>ALL</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>Math</item>
+    </string-array>
 </resources>
