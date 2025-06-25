@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import com.example.kotlin_250_project.R
@@ -75,11 +77,9 @@ class ProfileFragment : Fragment() {
 
     private fun setupClickListeners() {
         binding.logoutLayout.setOnClickListener {
-            auth.signOut()
-            Toast.makeText(requireContext(), "Logged out successfully", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(requireContext(), WelcomeActivity::class.java))
-            requireActivity().finish()
+            showLogoutConfirmationDialog()
         }
+
 
         binding.educationInfoLayout.setOnClickListener {
             startActivity(Intent(requireContext(),EducationInfoActivity::class.java))
@@ -90,7 +90,7 @@ class ProfileFragment : Fragment() {
         }
 
         binding.Mycourses.setOnClickListener {
-            Toast.makeText(requireContext(), "My Courses Clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireContext(), MyCoursesActivity::class.java))
         }
 
         binding.editIcon.setOnClickListener {
@@ -103,6 +103,37 @@ class ProfileFragment : Fragment() {
 
         // You may remove bottomNavigationView handling from here if it's being handled globally
     }
+
+    private fun showLogoutConfirmationDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialogue_logout, null) // Replace with your dialog layout filename without .xml extension
+        val dialog = android.app.AlertDialog.Builder(requireContext())
+            .setView(dialogView)
+            .create()
+
+        // Get views from the dialog layout
+        val btnCancel = dialogView.findViewById<Button>(R.id.btn_cancel)
+        val btnLogout = dialogView.findViewById<Button>(R.id.btn_logout)
+        val ivClose = dialogView.findViewById<ImageView>(R.id.iv_close_button)
+
+        btnCancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        ivClose.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        btnLogout.setOnClickListener {
+            auth.signOut()
+            Toast.makeText(requireContext(), "Logged out successfully", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireContext(), WelcomeActivity::class.java))
+            requireActivity().finish()
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

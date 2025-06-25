@@ -1,0 +1,142 @@
+[
+  {
+    "id": "q1",
+    "subject": "Physics",
+    "question": "What is the unit of electric current?",
+    "options": ["Ohm", "Volt", "Ampere", "Watt"],
+    "correctAnswer": "Ampere"
+  },
+  {
+    "id": "q2",
+    "subject": "Physics",
+    "question": "What does a convex lens do to light rays?",
+    "options": ["Converges", "Diverges", "Reflects", "Blocks"],
+    "correctAnswer": "Converges"
+  },
+  {
+    "id": "q3",
+    "subject": "Physics",
+    "question": "Which particle has a negative charge?",
+    "options": ["Proton", "Electron", "Neutron", "Alpha particle"],
+    "correctAnswer": "Electron"
+  },
+  {
+    "id": "q4",
+    "subject": "Physics",
+    "question": "What is the speed of light in vacuum?",
+    "options": ["3×10^8 m/s", "1.5×10^8 m/s", "3×10^6 m/s", "1×10^6 m/s"],
+    "correctAnswer": "3×10^8 m/s"
+  },
+  {
+    "id": "q5",
+    "subject": "Physics",
+    "question": "Who proposed the laws of motion?",
+    "options": ["Einstein", "Newton", "Galileo", "Bohr"],
+    "correctAnswer": "Newton"
+  },
+  {
+    "id": "q6",
+    "subject": "Chemistry",
+    "question": "What is H2O?",
+    "options": ["Hydrogen peroxide", "Hydrogen", "Water", "Oxygen"],
+    "correctAnswer": "Water"
+  },
+  {
+    "id": "q7",
+    "subject": "Chemistry",
+    "question": "What is the pH of a neutral solution?",
+    "options": ["0", "14", "7", "1"],
+    "correctAnswer": "7"
+  },
+  {
+    "id": "q8",
+    "subject": "Chemistry",
+    "question": "Which element is a halogen?",
+    "options": ["Sodium", "Iodine", "Iron", "Calcium"],
+    "correctAnswer": "Iodine"
+  },
+  {
+    "id": "q9",
+    "subject": "Chemistry",
+    "question": "Atomic number is equal to the number of:",
+    "options": ["Electrons", "Neutrons", "Protons", "Ions"],
+    "correctAnswer": "Protons"
+  },
+  {
+    "id": "q10",
+    "subject": "Chemistry",
+    "question": "NaCl is commonly known as:",
+    "options": ["Sugar", "Baking soda", "Salt", "Vinegar"],
+    "correctAnswer": "Salt"
+  },
+  {
+    "id": "q11",
+    "subject": "Math",
+    "question": "What is the value of π (pi) approximately?",
+    "options": ["3.14", "2.17", "1.62", "4.00"],
+    "correctAnswer": "3.14"
+  },
+  {
+    "id": "q12",
+    "subject": "Math",
+    "question": "Solve: 5 × 6 - 3",
+    "options": ["27", "30", "33", "28"],
+    "correctAnswer": "27"
+  },
+  {
+    "id": "q13",
+    "subject": "Math",
+    "question": "What is the square root of 81?",
+    "options": ["7", "8", "9", "10"],
+    "correctAnswer": "9"
+  },
+  {
+    "id": "q14",
+    "subject": "Math",
+    "question": "What is 2³?",
+    "options": ["4", "6", "8", "9"],
+    "correctAnswer": "8"
+  },
+  {
+    "id": "q15",
+    "subject": "Math",
+    "question": "What is the value of log(1)?",
+    "options": ["0", "1", "10", "Undefined"],
+    "correctAnswer": "0"
+  },
+  {
+    "id": "q16",
+    "subject": "Physics",
+    "question": "Which physical quantity is measured in joules?",
+    "options": ["Force", "Power", "Energy", "Pressure"],
+    "correctAnswer": "Energy"
+  },
+  {
+    "id": "q17",
+    "subject": "Chemistry",
+    "question": "Which of the following is an acid?",
+    "options": ["NaOH", "HCl", "KOH", "Ca(OH)₂"],
+    "correctAnswer": "HCl"
+  },
+  {
+    "id": "q18",
+    "subject": "Math",
+    "question": "Solve: (3 + 4) × 2",
+    "options": ["14", "11", "7", "8"],
+    "correctAnswer": "14"
+  },
+  {
+    "id": "q19",
+    "subject": "Physics",
+    "question": "What is the SI unit of pressure?",
+    "options": ["Newton", "Pascal", "Watt", "Joule"],
+    "correctAnswer": "Pascal"
+  },
+  {
+    "id": "q20",
+    "subject": "Chemistry",
+    "question": "What is the valency of carbon?",
+    "options": ["2", "3", "4", "5"],
+    "correctAnswer": "4"
+  }
+]

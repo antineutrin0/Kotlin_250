@@ -65,6 +65,8 @@
             android:exported="true"/>
         <activity android:name=".ui.CoursePlayerActivity"
             android:exported="true"/>
+        <activity android:name=".ui.MyCoursesActivity"
+            android:exported="true"/>
 
 
     </application>

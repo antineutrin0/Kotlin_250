@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Question Item Card Layout -->
+<!-- Individual Question Card Layout (no submit button) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -104,21 +104,10 @@
             android:layout_height="wrap_content"
             android:text="D) 11.8 m/s²"
             android:textSize="15sp"
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:background="@drawable/card_background"
             android:padding="12dp"
             android:buttonTint="#3B82F6" />
     </RadioGroup>
 
-    <!-- Question Footer - Submit Button -->
-    <Button
-        android:id="@+id/btn_submit_question"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit Answer"
-        android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/submit_button_background" />
 </LinearLayout>
