@@ -134,7 +134,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:background="@drawable/submit_button_background"
+            android:background="@drawable/button_gradient"
             android:layout_marginTop="16dp"
             style="?android:attr/borderlessButtonStyle"
             />
