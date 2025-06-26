@@ -3,37 +3,30 @@ package com.example.kotlin_250_project.ui
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlin_250_project.databinding.FragmentQuizBinding
 import java.io.InputStreamReader
 
-class QuizFragment : Fragment() {
+class QuizFragment : AppCompatActivity() {
 
-    private var _binding: FragmentQuizBinding? = null
-    private val binding get() = _binding!!
-
+    private lateinit var binding: FragmentQuizBinding
     private lateinit var questions: List<Question>
     private lateinit var adapter: QuestionAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentQuizBinding.inflate(inflater, container, false)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding = FragmentQuizBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         loadQuestionsFromJson()
         setupRecyclerView()
         setupSubmitButton()
-
-        return binding.root
     }
 
     private fun loadQuestionsFromJson() {
-        val inputStream = requireContext().assets.open("questions.json")
+        val inputStream = assets.open("questions.json")
         val reader = InputStreamReader(inputStream)
         val questionListType = object : TypeToken<List<Question>>() {}.type
         questions = Gson().fromJson(reader, questionListType)
@@ -42,7 +35,7 @@ class QuizFragment : Fragment() {
 
     private fun setupRecyclerView() {
         adapter = QuestionAdapter(questions)
-        binding.rvQuestions.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvQuestions.layoutManager = LinearLayoutManager(this)
         binding.rvQuestions.adapter = adapter
     }
 
@@ -52,7 +45,7 @@ class QuizFragment : Fragment() {
 
             if (selectedAnswers.size < questions.size) {
                 android.widget.Toast.makeText(
-                    requireContext(),
+                    this,
                     "Please answer all questions",
                     android.widget.Toast.LENGTH_SHORT
                 ).show()
@@ -68,15 +61,10 @@ class QuizFragment : Fragment() {
             }
 
             android.widget.Toast.makeText(
-                requireContext(),
+                this,
                 "You scored $score out of ${questions.size}",
                 android.widget.Toast.LENGTH_LONG
             ).show()
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
