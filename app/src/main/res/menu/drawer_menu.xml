@@ -37,7 +37,7 @@
             android:icon="@drawable/ic_logout"
             android:title="Log Out"
             android:iconTint="#EF4444"
-            android:titleColor="#EF4444" />
+            />
 
     </group>
 

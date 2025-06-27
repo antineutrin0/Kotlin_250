@@ -8,135 +8,1395 @@
   },
   {
     "id": "q2",
-    "subject": "Physics",
-    "question": "What does a convex lens do to light rays?",
-    "options": ["Converges", "Diverges", "Reflects", "Blocks"],
-    "correctAnswer": "Converges"
+    "subject": "Mathematics",
+    "question": "What is the value of π (pi) to two decimal places?",
+    "options": ["3.14", "3.16", "3.12", "3.18"],
+    "correctAnswer": "3.14"
   },
   {
     "id": "q3",
-    "subject": "Physics",
-    "question": "Which particle has a negative charge?",
-    "options": ["Proton", "Electron", "Neutron", "Alpha particle"],
-    "correctAnswer": "Electron"
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Go", "Gd", "Au", "Ag"],
+    "correctAnswer": "Au"
   },
   {
     "id": "q4",
     "subject": "Physics",
-    "question": "What is the speed of light in vacuum?",
-    "options": ["3×10^8 m/s", "1.5×10^8 m/s", "3×10^6 m/s", "1×10^6 m/s"],
-    "correctAnswer": "3×10^8 m/s"
+    "question": "Which law states that force equals mass times acceleration?",
+    "options": ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Ohm's Law"],
+    "correctAnswer": "Newton's Second Law"
   },
   {
     "id": "q5",
-    "subject": "Physics",
-    "question": "Who proposed the laws of motion?",
-    "options": ["Einstein", "Newton", "Galileo", "Bohr"],
-    "correctAnswer": "Newton"
+    "subject": "Mathematics",
+    "question": "What is 5 squared?",
+    "options": ["10", "15", "20", "25"],
+    "correctAnswer": "25"
   },
   {
     "id": "q6",
     "subject": "Chemistry",
-    "question": "What is H2O?",
-    "options": ["Hydrogen peroxide", "Hydrogen", "Water", "Oxygen"],
-    "correctAnswer": "Water"
+    "question": "What is the lightest element on the periodic table?",
+    "options": ["Helium", "Hydrogen", "Oxygen", "Carbon"],
+    "correctAnswer": "Hydrogen"
   },
   {
     "id": "q7",
-    "subject": "Chemistry",
-    "question": "What is the pH of a neutral solution?",
-    "options": ["0", "14", "7", "1"],
-    "correctAnswer": "7"
+    "subject": "Mathematics",
+    "question": "What is the square root of 64?",
+    "options": ["6", "7", "8", "9"],
+    "correctAnswer": "8"
   },
   {
     "id": "q8",
-    "subject": "Chemistry",
-    "question": "Which element is a halogen?",
-    "options": ["Sodium", "Iodine", "Iron", "Calcium"],
-    "correctAnswer": "Iodine"
+    "subject": "Physics",
+    "question": "What type of energy is stored in a battery?",
+    "options": ["Kinetic", "Potential", "Thermal", "Mechanical"],
+    "correctAnswer": "Potential"
   },
   {
     "id": "q9",
     "subject": "Chemistry",
-    "question": "Atomic number is equal to the number of:",
-    "options": ["Electrons", "Neutrons", "Protons", "Ions"],
-    "correctAnswer": "Protons"
+    "question": "What is the main gas found in the air we breathe?",
+    "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+    "correctAnswer": "Nitrogen"
   },
   {
     "id": "q10",
-    "subject": "Chemistry",
-    "question": "NaCl is commonly known as:",
-    "options": ["Sugar", "Baking soda", "Salt", "Vinegar"],
-    "correctAnswer": "Salt"
+    "subject": "Mathematics",
+    "question": "What is 7 times 8?",
+    "options": ["48", "56", "64", "72"],
+    "correctAnswer": "56"
   },
   {
     "id": "q11",
-    "subject": "Math",
-    "question": "What is the value of π (pi) approximately?",
-    "options": ["3.14", "2.17", "1.62", "4.00"],
-    "correctAnswer": "3.14"
+    "subject": "Physics",
+    "question": "What is the SI unit of force?",
+    "options": ["Joule", "Newton", "Watt", "Pascal"],
+    "correctAnswer": "Newton"
   },
   {
     "id": "q12",
-    "subject": "Math",
-    "question": "Solve: 5 × 6 - 3",
-    "options": ["27", "30", "33", "28"],
-    "correctAnswer": "27"
+    "subject": "Chemistry",
+    "question": "What is the pH value of pure water?",
+    "options": ["0", "7", "14", "1"],
+    "correctAnswer": "7"
   },
   {
     "id": "q13",
-    "subject": "Math",
-    "question": "What is the square root of 81?",
-    "options": ["7", "8", "9", "10"],
-    "correctAnswer": "9"
+    "subject": "Mathematics",
+    "question": "What is the sum of angles in a triangle?",
+    "options": ["90°", "180°", "270°", "360°"],
+    "correctAnswer": "180°"
   },
   {
     "id": "q14",
-    "subject": "Math",
-    "question": "What is 2³?",
-    "options": ["4", "6", "8", "9"],
-    "correctAnswer": "8"
+    "subject": "Physics",
+    "question": "What is the fastest speed possible in the universe?",
+    "options": ["Speed of sound", "Speed of light", "Speed of electricity", "Speed of thought"],
+    "correctAnswer": "Speed of light"
   },
   {
     "id": "q15",
-    "subject": "Math",
-    "question": "What is the value of log(1)?",
-    "options": ["0", "1", "10", "Undefined"],
-    "correctAnswer": "0"
+    "subject": "Chemistry",
+    "question": "What is the chemical formula for table salt?",
+    "options": ["NaCl", "H2O", "CO2", "CH4"],
+    "correctAnswer": "NaCl"
   },
   {
     "id": "q16",
-    "subject": "Physics",
-    "question": "Which physical quantity is measured in joules?",
-    "options": ["Force", "Power", "Energy", "Pressure"],
-    "correctAnswer": "Energy"
+    "subject": "Mathematics",
+    "question": "What is the next prime number after 7?",
+    "options": ["8", "9", "10", "11"],
+    "correctAnswer": "11"
   },
   {
     "id": "q17",
-    "subject": "Chemistry",
-    "question": "Which of the following is an acid?",
-    "options": ["NaOH", "HCl", "KOH", "Ca(OH)₂"],
-    "correctAnswer": "HCl"
+    "subject": "Physics",
+    "question": "What is the unit of electrical resistance?",
+    "options": ["Volt", "Ampere", "Ohm", "Watt"],
+    "correctAnswer": "Ohm"
   },
   {
     "id": "q18",
-    "subject": "Math",
-    "question": "Solve: (3 + 4) × 2",
-    "options": ["14", "11", "7", "8"],
-    "correctAnswer": "14"
+    "subject": "Chemistry",
+    "question": "Which gas makes up about 21% of Earth's atmosphere?",
+    "options": ["Nitrogen", "Oxygen", "Carbon dioxide", "Argon"],
+    "correctAnswer": "Oxygen"
   },
   {
     "id": "q19",
-    "subject": "Physics",
-    "question": "What is the SI unit of pressure?",
-    "options": ["Newton", "Pascal", "Watt", "Joule"],
-    "correctAnswer": "Pascal"
+    "subject": "Mathematics",
+    "question": "What is 12 divided by 3?",
+    "options": ["2", "3", "4", "6"],
+    "correctAnswer": "4"
   },
   {
     "id": "q20",
+    "subject": "Physics",
+    "question": "What is the energy of motion called?",
+    "options": ["Potential energy", "Kinetic energy", "Thermal energy", "Chemical energy"],
+    "correctAnswer": "Kinetic energy"
+  },
+  {
+    "id": "q21",
     "subject": "Chemistry",
-    "question": "What is the valency of carbon?",
+    "question": "What is the atomic number of carbon?",
+    "options": ["6", "12", "14", "16"],
+    "correctAnswer": "6"
+  },
+  {
+    "id": "q22",
+    "subject": "Mathematics",
+    "question": "What is 3 to the power of 3?",
+    "options": ["6", "9", "27", "81"],
+    "correctAnswer": "27"
+  },
+  {
+    "id": "q23",
+    "subject": "Physics",
+    "question": "What is the force that opposes motion between two surfaces?",
+    "options": ["Gravity", "Friction", "Magnetism", "Tension"],
+    "correctAnswer": "Friction"
+  },
+  {
+    "id": "q24",
+    "subject": "Chemistry",
+    "question": "What is the common name for sodium bicarbonate?",
+    "options": ["Vinegar", "Baking soda", "Table salt", "Bleach"],
+    "correctAnswer": "Baking soda"
+  },
+  {
+    "id": "q25",
+    "subject": "Mathematics",
+    "question": "What is 15% of 200?",
+    "options": ["15", "20", "30", "45"],
+    "correctAnswer": "30"
+  },
+  {
+    "id": "q26",
+    "subject": "Physics",
+    "question": "What is the unit of frequency?",
+    "options": ["Hertz", "Decibel", "Ohm", "Watt"],
+    "correctAnswer": "Hertz"
+  },
+  {
+    "id": "q27",
+    "subject": "Chemistry",
+    "question": "What is the lightest noble gas?",
+    "options": ["Helium", "Neon", "Argon", "Krypton"],
+    "correctAnswer": "Helium"
+  },
+  {
+    "id": "q28",
+    "subject": "Mathematics",
+    "question": "What is the area of a square with side length 5?",
+    "options": ["10", "20", "25", "30"],
+    "correctAnswer": "25"
+  },
+  {
+    "id": "q29",
+    "subject": "Physics",
+    "question": "What is the acceleration due to gravity on Earth?",
+    "options": ["9.8 m/s²", "10 m/s²", "8.9 m/s²", "11 m/s²"],
+    "correctAnswer": "9.8 m/s²"
+  },
+  {
+    "id": "q30",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for silver?",
+    "options": ["Si", "Ag", "Au", "Sr"],
+    "correctAnswer": "Ag"
+  },
+  {
+    "id": "q31",
+    "subject": "Mathematics",
+    "question": "What is the value of 2^5?",
+    "options": ["16", "32", "64", "128"],
+    "correctAnswer": "32"
+  },
+  {
+    "id": "q32",
+    "subject": "Physics",
+    "question": "What type of wave is sound?",
+    "options": ["Transverse", "Longitudinal", "Electromagnetic", "Surface"],
+    "correctAnswer": "Longitudinal"
+  },
+  {
+    "id": "q33",
+    "subject": "Chemistry",
+    "question": "What is the chemical formula for methane?",
+    "options": ["CH4", "CO2", "H2O", "NH3"],
+    "correctAnswer": "CH4"
+  },
+  {
+    "id": "q34",
+    "subject": "Mathematics",
+    "question": "What is the perimeter of a rectangle with length 4 and width 3?",
+    "options": ["7", "12", "14", "16"],
+    "correctAnswer": "14"
+  },
+  {
+    "id": "q35",
+    "subject": "Physics",
+    "question": "What is the unit of power?",
+    "options": ["Joule", "Newton", "Watt", "Volt"],
+    "correctAnswer": "Watt"
+  },
+  {
+    "id": "q36",
+    "subject": "Chemistry",
+    "question": "What is the most abundant metal in Earth's crust?",
+    "options": ["Iron", "Aluminum", "Copper", "Gold"],
+    "correctAnswer": "Aluminum"
+  },
+  {
+    "id": "q37",
+    "subject": "Mathematics",
+    "question": "What is the greatest common divisor of 12 and 18?",
+    "options": ["3", "6", "9", "12"],
+    "correctAnswer": "6"
+  },
+  {
+    "id": "q38",
+    "subject": "Physics",
+    "question": "What is the bending of light as it passes from one medium to another called?",
+    "options": ["Reflection", "Refraction", "Diffraction", "Dispersion"],
+    "correctAnswer": "Refraction"
+  },
+  {
+    "id": "q39",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for potassium?",
+    "options": ["P", "Po", "K", "Ko"],
+    "correctAnswer": "K"
+  },
+  {
+    "id": "q40",
+    "subject": "Mathematics",
+    "question": "What is the sum of the first 5 natural numbers?",
+    "options": ["10", "12", "15", "20"],
+    "correctAnswer": "15"
+  },
+  {
+    "id": "q41",
+    "subject": "Physics",
+    "question": "What is the unit of electric charge?",
+    "options": ["Ampere", "Volt", "Coulomb", "Ohm"],
+    "correctAnswer": "Coulomb"
+  },
+  {
+    "id": "q42",
+    "subject": "Chemistry",
+    "question": "What is the chemical formula for carbon dioxide?",
+    "options": ["CO", "CO2", "C2O", "C2O2"],
+    "correctAnswer": "CO2"
+  },
+  {
+    "id": "q43",
+    "subject": "Mathematics",
+    "question": "What is the lowest common multiple of 4 and 6?",
+    "options": ["6", "12", "18", "24"],
+    "correctAnswer": "12"
+  },
+  {
+    "id": "q44",
+    "subject": "Physics",
+    "question": "What is the force that keeps planets in orbit around the sun?",
+    "options": ["Electromagnetic force", "Gravitational force", "Nuclear force", "Centrifugal force"],
+    "correctAnswer": "Gravitational force"
+  },
+  {
+    "id": "q45",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for iron?",
+    "options": ["Ir", "Fe", "In", "Fi"],
+    "correctAnswer": "Fe"
+  },
+  {
+    "id": "q46",
+    "subject": "Mathematics",
+    "question": "What is 0.5 expressed as a fraction?",
+    "options": ["1/4", "1/3", "1/2", "2/3"],
+    "correctAnswer": "1/2"
+  },
+  {
+    "id": "q47",
+    "subject": "Physics",
+    "question": "What is the unit of pressure?",
+    "options": ["Newton", "Pascal", "Joule", "Watt"],
+    "correctAnswer": "Pascal"
+  },
+  {
+    "id": "q48",
+    "subject": "Chemistry",
+    "question": "What is the chemical formula for sulfuric acid?",
+    "options": ["H2SO4", "HCl", "HNO3", "H3PO4"],
+    "correctAnswer": "H2SO4"
+  },
+  {
+    "id": "q49",
+    "subject": "Mathematics",
+    "question": "What is the value of sin(30°)?",
+    "options": ["0", "0.5", "1", "√3/2"],
+    "correctAnswer": "0.5"
+  },
+  {
+    "id": "q50",
+    "subject": "Physics",
+    "question": "What is the energy stored in a stretched spring called?",
+    "options": ["Kinetic energy", "Potential energy", "Thermal energy", "Elastic potential energy"],
+    "correctAnswer": "Elastic potential energy"
+  },
+  {
+    "id": "q51",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for sodium?",
+    "options": ["So", "Sd", "Na", "No"],
+    "correctAnswer": "Na"
+  },
+  {
+    "id": "q52",
+    "subject": "Mathematics",
+    "question": "What is the derivative of x²?",
+    "options": ["x", "2x", "x³", "2"],
+    "correctAnswer": "2x"
+  },
+  {
+    "id": "q53",
+    "subject": "Physics",
+    "question": "What is the unit of work and energy?",
+    "options": ["Newton", "Watt", "Joule", "Pascal"],
+    "correctAnswer": "Joule"
+  },
+  {
+    "id": "q54",
+    "subject": "Chemistry",
+    "question": "What is the chemical formula for ammonia?",
+    "options": ["NH3", "NO2", "N2O", "N2H4"],
+    "correctAnswer": "NH3"
+  },
+  {
+    "id": "q55",
+    "subject": "Mathematics",
+    "question": "What is the integral of 2x dx?",
+    "options": ["x", "x²", "2x²", "x² + C"],
+    "correctAnswer": "x² + C"
+  },
+  {
+    "id": "q56",
+    "subject": "Physics",
+    "question": "What is the phenomenon where light separates into different colors?",
+    "options": ["Reflection", "Refraction", "Dispersion", "Diffraction"],
+    "correctAnswer": "Dispersion"
+  },
+  {
+    "id": "q57",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for lead?",
+    "options": ["Ld", "Pb", "Pl", "Le"],
+    "correctAnswer": "Pb"
+  },
+  {
+    "id": "q58",
+    "subject": "Mathematics",
+    "question": "What is the value of cos(60°)?",
+    "options": ["0", "0.5", "1", "√3/2"],
+    "correctAnswer": "0.5"
+  },
+  {
+    "id": "q59",
+    "subject": "Physics",
+    "question": "What is the unit of capacitance?",
+    "options": ["Ohm", "Farad", "Henry", "Tesla"],
+    "correctAnswer": "Farad"
+  },
+  {
+    "id": "q60",
+    "subject": "Chemistry",
+    "question": "What is the chemical formula for hydrogen peroxide?",
+    "options": ["H2O", "HO2", "H2O2", "H3O"],
+    "correctAnswer": "H2O2"
+  },
+  {
+    "id": "q61",
+    "subject": "Mathematics",
+    "question": "What is the value of tan(45°)?",
+    "options": ["0", "0.5", "1", "√3"],
+    "correctAnswer": "1"
+  },
+  {
+    "id": "q62",
+    "subject": "Physics",
+    "question": "What is the unit of magnetic flux?",
+    "options": ["Tesla", "Weber", "Henry", "Farad"],
+    "correctAnswer": "Weber"
+  },
+  {
+    "id": "q63",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for mercury?",
+    "options": ["Me", "Mg", "Hy", "Hg"],
+    "correctAnswer": "Hg"
+  },
+  {
+    "id": "q64",
+    "subject": "Mathematics",
+    "question": "What is the slope of the line y = 2x + 3?",
+    "options": ["2", "3", "1", "0"],
+    "correctAnswer": "2"
+  },
+  {
+    "id": "q65",
+    "subject": "Physics",
+    "question": "What is the unit of inductance?",
+    "options": ["Farad", "Henry", "Ohm", "Tesla"],
+    "correctAnswer": "Henry"
+  },
+  {
+    "id": "q66",
+    "subject": "Chemistry",
+    "question": "What is the chemical formula for ozone?",
+    "options": ["O2", "O3", "O4", "HO"],
+    "correctAnswer": "O3"
+  },
+  {
+    "id": "q67",
+    "subject": "Mathematics",
+    "question": "What is the y-intercept of the line y = 2x + 3?",
+    "options": ["2", "3", "1", "0"],
+    "correctAnswer": "3"
+  },
+  {
+    "id": "q68",
+    "subject": "Physics",
+    "question": "What is the unit of magnetic field strength?",
+    "options": ["Tesla", "Weber", "Henry", "Gauss"],
+    "correctAnswer": "Tesla"
+  },
+  {
+    "id": "q69",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for tin?",
+    "options": ["Ti", "Tn", "Sn", "Si"],
+    "correctAnswer": "Sn"
+  },
+  {
+    "id": "q70",
+    "subject": "Mathematics",
+    "question": "What is the solution to x + 5 = 10?",
+    "options": ["2", "5", "10", "15"],
+    "correctAnswer": "5"
+  },
+  {
+    "id": "q71",
+    "subject": "Physics",
+    "question": "What is the unit of electric potential difference?",
+    "options": ["Ampere", "Volt", "Ohm", "Watt"],
+    "correctAnswer": "Volt"
+  },
+  {
+    "id": "q72",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for copper?",
+    "options": ["Co", "Cu", "Cp", "Cr"],
+    "correctAnswer": "Cu"
+  },
+  {
+    "id": "q73",
+    "subject": "Mathematics",
+    "question": "What is the solution to 2x = 10?",
+    "options": ["2", "5", "10", "20"],
+    "correctAnswer": "5"
+  },
+  {
+    "id": "q74",
+    "subject": "Physics",
+    "question": "What is the unit of luminous intensity?",
+    "options": ["Lumen", "Candela", "Lux", "Watt"],
+    "correctAnswer": "Candela"
+  },
+  {
+    "id": "q75",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for calcium?",
+    "options": ["Cl", "Ca", "Cm", "Co"],
+    "correctAnswer": "Ca"
+  },
+  {
+    "id": "q76",
+    "subject": "Mathematics",
+    "question": "What is the solution to x - 3 = 7?",
+    "options": ["4", "7", "10", "21"],
+    "correctAnswer": "10"
+  },
+  {
+    "id": "q77",
+    "subject": "Physics",
+    "question": "What is the unit of radioactivity?",
+    "options": ["Becquerel", "Gray", "Sievert", "Curie"],
+    "correctAnswer": "Becquerel"
+  },
+  {
+    "id": "q78",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for nitrogen?",
+    "options": ["Ni", "N", "No", "Ne"],
+    "correctAnswer": "N"
+  },
+  {
+    "id": "q79",
+    "subject": "Mathematics",
+    "question": "What is the solution to 3x + 2 = 14?",
+    "options": ["2", "4", "6", "8"],
+    "correctAnswer": "4"
+  },
+  {
+    "id": "q80",
+    "subject": "Physics",
+    "question": "What is the unit of absorbed dose of radiation?",
+    "options": ["Becquerel", "Gray", "Sievert", "Curie"],
+    "correctAnswer": "Gray"
+  },
+  {
+    "id": "q81",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for oxygen?",
+    "options": ["Ox", "O", "Oy", "Og"],
+    "correctAnswer": "O"
+  },
+  {
+    "id": "q82",
+    "subject": "Mathematics",
+    "question": "What is the solution to x² = 16?",
+    "options": ["2", "4", "8", "16"],
+    "correctAnswer": "4"
+  },
+  {
+    "id": "q83",
+    "subject": "Physics",
+    "question": "What is the unit of equivalent dose of radiation?",
+    "options": ["Becquerel", "Gray", "Sievert", "Curie"],
+    "correctAnswer": "Sievert"
+  },
+  {
+    "id": "q84",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for phosphorus?",
+    "options": ["P", "Ph", "Ps", "Po"],
+    "correctAnswer": "P"
+  },
+  {
+    "id": "q85",
+    "subject": "Mathematics",
+    "question": "What is the solution to √x = 4?",
+    "options": ["2", "4", "8", "16"],
+    "correctAnswer": "16"
+  },
+  {
+    "id": "q86",
+    "subject": "Physics",
+    "question": "What is the unit of electric conductance?",
+    "options": ["Ohm", "Siemens", "Farad", "Henry"],
+    "correctAnswer": "Siemens"
+  },
+  {
+    "id": "q87",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for sulfur?",
+    "options": ["Su", "S", "Sl", "Sr"],
+    "correctAnswer": "S"
+  },
+  {
+    "id": "q88",
+    "subject": "Mathematics",
+    "question": "What is the solution to 2x + 3 = 11?",
+    "options": ["2", "4", "6", "8"],
+    "correctAnswer": "4"
+  },
+  {
+    "id": "q89",
+    "subject": "Physics",
+    "question": "What is the unit of magnetic flux density?",
+    "options": ["Tesla", "Weber", "Henry", "Farad"],
+    "correctAnswer": "Tesla"
+  },
+  {
+    "id": "q90",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for chlorine?",
+    "options": ["Ch", "Cl", "Cr", "Cn"],
+    "correctAnswer": "Cl"
+  },
+  {
+    "id": "q91",
+    "subject": "Mathematics",
+    "question": "What is the solution to 5x - 7 = 18?",
+    "options": ["3", "5", "7", "9"],
+    "correctAnswer": "5"
+  },
+  {
+    "id": "q92",
+    "subject": "Physics",
+    "question": "What is the unit of luminous flux?",
+    "options": ["Lumen", "Candela", "Lux", "Watt"],
+    "correctAnswer": "Lumen"
+  },
+  {
+    "id": "q93",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for silicon?",
+    "options": ["Si", "Sl", "Sn", "Sc"],
+    "correctAnswer": "Si"
+  },
+  {
+    "id": "q94",
+    "subject": "Mathematics",
+    "question": "What is the solution to x/3 = 4?",
+    "options": ["4", "7", "12", "16"],
+    "correctAnswer": "12"
+  },
+  {
+    "id": "q95",
+    "subject": "Physics",
+    "question": "What is the unit of illuminance?",
+    "options": ["Lumen", "Candela", "Lux", "Watt"],
+    "correctAnswer": "Lux"
+  },
+  {
+    "id": "q96",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for uranium?",
+    "options": ["Ur", "U", "Um", "Un"],
+    "correctAnswer": "U"
+  },
+  {
+    "id": "q97",
+    "subject": "Mathematics",
+    "question": "What is the solution to 3(x + 2) = 15?",
+    "options": ["1", "3", "5", "7"],
+    "correctAnswer": "3"
+  },
+  {
+    "id": "q98",
+    "subject": "Physics",
+    "question": "What is the unit of catalytic activity?",
+    "options": ["Mole", "Katal", "Henry", "Farad"],
+    "correctAnswer": "Katal"
+  },
+  {
+    "id": "q99",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for tungsten?",
+    "options": ["Tu", "Tn", "W", "Tg"],
+    "correctAnswer": "W"
+  },
+  {
+    "id": "q100",
+    "subject": "Mathematics",
+    "question": "What is the solution to 4x - 5 = 11?",
+    "options": ["2", "4", "6", "8"],
+    "correctAnswer": "4"
+  },
+  {
+    "id": "q101",
+    "subject": "Physics",
+    "question": "What is the unit of thermodynamic temperature?",
+    "options": ["Celsius", "Fahrenheit", "Kelvin", "Rankine"],
+    "correctAnswer": "Kelvin"
+  },
+  {
+    "id": "q102",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for zinc?",
+    "options": ["Zi", "Zn", "Zc", "Z"],
+    "correctAnswer": "Zn"
+  },
+  {
+    "id": "q103",
+    "subject": "Mathematics",
+    "question": "What is the solution to 2(x - 3) = 10?",
+    "options": ["4", "6", "8", "10"],
+    "correctAnswer": "8"
+  },
+  {
+    "id": "q104",
+    "subject": "Physics",
+    "question": "What is the unit of amount of substance?",
+    "options": ["Mole", "Gram", "Liter", "Pascal"],
+    "correctAnswer": "Mole"
+  },
+  {
+    "id": "q105",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for barium?",
+    "options": ["Ba", "Br", "Bi", "Bm"],
+    "correctAnswer": "Ba"
+  },
+  {
+    "id": "q106",
+    "subject": "Mathematics",
+    "question": "What is the solution to x² + 5x + 6 = 0?",
+    "options": ["-2, -3", "2, 3", "-1, -6", "1, 6"],
+    "correctAnswer": "-2, -3"
+  },
+  {
+    "id": "q107",
+    "subject": "Physics",
+    "question": "What is the unit of plane angle?",
+    "options": ["Degree", "Radian", "Steradian", "Gradian"],
+    "correctAnswer": "Radian"
+  },
+  {
+    "id": "q108",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for beryllium?",
+    "options": ["Be", "By", "Bl", "Br"],
+    "correctAnswer": "Be"
+  },
+  {
+    "id": "q109",
+    "subject": "Mathematics",
+    "question": "What is the solution to x² - 9 = 0?",
+    "options": ["3", "-3", "±3", "9"],
+    "correctAnswer": "±3"
+  },
+  {
+    "id": "q110",
+    "subject": "Physics",
+    "question": "What is the unit of solid angle?",
+    "options": ["Degree", "Radian", "Steradian", "Gradian"],
+    "correctAnswer": "Steradian"
+  },
+  {
+    "id": "q111",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for bromine?",
+    "options": ["Bm", "Br", "Bn", "Bo"],
+    "correctAnswer": "Br"
+  },
+  {
+    "id": "q112",
+    "subject": "Mathematics",
+    "question": "What is the solution to 2x² = 32?",
+    "options": ["2", "4", "8", "16"],
+    "correctAnswer": "4"
+  },
+  {
+    "id": "q113",
+    "subject": "Physics",
+    "question": "What is the unit of activity of a radioactive source?",
+    "options": ["Becquerel", "Gray", "Sievert", "Curie"],
+    "correctAnswer": "Becquerel"
+  },
+  {
+    "id": "q114",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for cadmium?",
+    "options": ["Ca", "Cd", "Cm", "Cr"],
+    "correctAnswer": "Cd"
+  },
+  {
+    "id": "q115",
+    "subject": "Mathematics",
+    "question": "What is the solution to 3x + 4 = 2x + 7?",
+    "options": ["1", "2", "3", "4"],
+    "correctAnswer": "3"
+  },
+  {
+    "id": "q116",
+    "subject": "Physics",
+    "question": "What is the unit of dynamic viscosity?",
+    "options": ["Pascal-second", "Newton-second", "Joule-second", "Watt-second"],
+    "correctAnswer": "Pascal-second"
+  },
+  {
+    "id": "q117",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for cesium?",
+    "options": ["Ce", "Cs", "Cm", "Cr"],
+    "correctAnswer": "Cs"
+  },
+  {
+    "id": "q118",
+    "subject": "Mathematics",
+    "question": "What is the solution to 5x - 3 = 2x + 9?",
     "options": ["2", "3", "4", "5"],
     "correctAnswer": "4"
+  },
+  {
+    "id": "q119",
+    "subject": "Physics",
+    "question": "What is the unit of kinematic viscosity?",
+    "options": ["m²/s", "m/s²", "N·s/m²", "Pa·s"],
+    "correctAnswer": "m²/s"
+  },
+  {
+    "id": "q120",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for cobalt?",
+    "options": ["Cb", "Co", "Ct", "Cl"],
+    "correctAnswer": "Co"
+  },
+  {
+    "id": "q121",
+    "subject": "Mathematics",
+    "question": "What is the solution to 4(x + 2) = 3(x + 5)?",
+    "options": ["3", "5", "7", "9"],
+    "correctAnswer": "7"
+  },
+  {
+    "id": "q122",
+    "subject": "Physics",
+    "question": "What is the unit of surface tension?",
+    "options": ["N/m", "N·m", "J/m", "W/m"],
+    "correctAnswer": "N/m"
+  },
+  {
+    "id": "q123",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for chromium?",
+    "options": ["Ch", "Cr", "Cm", "Co"],
+    "correctAnswer": "Cr"
+  },
+  {
+    "id": "q124",
+    "subject": "Mathematics",
+    "question": "What is the solution to (x + 3)(x - 2) = 0?",
+    "options": ["-3, 2", "3, -2", "3, 2", "-3, -2"],
+    "correctAnswer": "-3, 2"
+  },
+  {
+    "id": "q125",
+    "subject": "Physics",
+    "question": "What is the unit of heat capacity?",
+    "options": ["J/K", "J·K", "W/K", "W·K"],
+    "correctAnswer": "J/K"
+  },
+  {
+    "id": "q126",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for fluorine?",
+    "options": ["Fl", "F", "Fr", "Fo"],
+    "correctAnswer": "F"
+  },
+  {
+    "id": "q127",
+    "subject": "Mathematics",
+    "question": "What is the solution to x² - 5x + 6 = 0?",
+    "options": ["2, 3", "-2, -3", "1, 6", "-1, -6"],
+    "correctAnswer": "2, 3"
+  },
+  {
+    "id": "q128",
+    "subject": "Physics",
+    "question": "What is the unit of specific heat capacity?",
+    "options": ["J/(kg·K)", "J·kg/K", "W/(kg·K)", "W·kg/K"],
+    "correctAnswer": "J/(kg·K)"
+  },
+  {
+    "id": "q129",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for helium?",
+    "options": ["He", "Hl", "Hm", "Hu"],
+    "correctAnswer": "He"
+  },
+  {
+    "id": "q130",
+    "subject": "Mathematics",
+    "question": "What is the solution to x² + 4x + 4 = 0?",
+    "options": ["2", "-2", "2, -2", "No solution"],
+    "correctAnswer": "-2"
+  },
+  {
+    "id": "q131",
+    "subject": "Physics",
+    "question": "What is the unit of thermal conductivity?",
+    "options": ["W/(m·K)", "W·m/K", "J/(m·K)", "J·m/K"],
+    "correctAnswer": "W/(m·K)"
+  },
+  {
+    "id": "q132",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for lithium?",
+    "options": ["Lt", "Li", "Lm", "La"],
+    "correctAnswer": "Li"
+  },
+  {
+    "id": "q133",
+    "subject": "Mathematics",
+    "question": "What is the solution to x² - 4 = 0?",
+    "options": ["2", "-2", "±2", "4"],
+    "correctAnswer": "±2"
+  },
+  {
+    "id": "q134",
+    "subject": "Physics",
+    "question": "What is the unit of electric field strength?",
+    "options": ["N/C", "V/m", "Both A and B", "J/C"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q135",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for manganese?",
+    "options": ["Ma", "Mn", "Mg", "Mr"],
+    "correctAnswer": "Mn"
+  },
+  {
+    "id": "q136",
+    "subject": "Mathematics",
+    "question": "What is the solution to x³ = 8?",
+    "options": ["2", "4", "8", "16"],
+    "correctAnswer": "2"
+  },
+  {
+    "id": "q137",
+    "subject": "Physics",
+    "question": "What is the unit of magnetic moment?",
+    "options": ["A·m²", "N·m/T", "J/T", "All of the above"],
+    "correctAnswer": "All of the above"
+  },
+  {
+    "id": "q138",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for nickel?",
+    "options": ["Nk", "Ni", "Nc", "Nl"],
+    "correctAnswer": "Ni"
+  },
+  {
+    "id": "q139",
+    "subject": "Mathematics",
+    "question": "What is the solution to 2ˣ = 16?",
+    "options": ["2", "4", "8", "16"],
+    "correctAnswer": "4"
+  },
+  {
+    "id": "q140",
+    "subject": "Physics",
+    "question": "What is the unit of molar heat capacity?",
+    "options": ["J/(mol·K)", "J·mol/K", "W/(mol·K)", "W·mol/K"],
+    "correctAnswer": "J/(mol·K)"
+  },
+  {
+    "id": "q141",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for neon?",
+    "options": ["No", "Ne", "Nn", "Nm"],
+    "correctAnswer": "Ne"
+  },
+  {
+    "id": "q142",
+    "subject": "Mathematics",
+    "question": "What is the solution to log₂8 = x?",
+    "options": ["2", "3", "4", "8"],
+    "correctAnswer": "3"
+  },
+  {
+    "id": "q143",
+    "subject": "Physics",
+    "question": "What is the unit of molar entropy?",
+    "options": ["J/(mol·K)", "J·mol/K", "W/(mol·K)", "W·mol/K"],
+    "correctAnswer": "J/(mol·K)"
+  },
+  {
+    "id": "q144",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for plutonium?",
+    "options": ["Pl", "Pu", "Pt", "Pm"],
+    "correctAnswer": "Pu"
+  },
+  {
+    "id": "q145",
+    "subject": "Mathematics",
+    "question": "What is the solution to ln(e³) = x?",
+    "options": ["1", "3", "e", "e³"],
+    "correctAnswer": "3"
+  },
+  {
+    "id": "q146",
+    "subject": "Physics",
+    "question": "What is the unit of molar energy?",
+    "options": ["J/mol", "J·mol", "W/mol", "W·mol"],
+    "correctAnswer": "J/mol"
+  },
+  {
+    "id": "q147",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for radium?",
+    "options": ["Ra", "Rd", "Rm", "Ru"],
+    "correctAnswer": "Ra"
+  },
+  {
+    "id": "q148",
+    "subject": "Mathematics",
+    "question": "What is the solution to sin(x) = 0.5?",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correctAnswer": "30°"
+  },
+  {
+    "id": "q149",
+    "subject": "Physics",
+    "question": "What is the unit of molar volume?",
+    "options": ["m³/mol", "L/mol", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q150",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for radon?",
+    "options": ["Rd", "Rn", "Ro", "Ra"],
+    "correctAnswer": "Rn"
+  },
+  {
+    "id": "q151",
+    "subject": "Mathematics",
+    "question": "What is the solution to cos(x) = √3/2?",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correctAnswer": "30°"
+  },
+  {
+    "id": "q152",
+    "subject": "Physics",
+    "question": "What is the unit of molar mass?",
+    "options": ["g/mol", "kg/mol", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q153",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for rubidium?",
+    "options": ["Ru", "Rb", "Rd", "Rm"],
+    "correctAnswer": "Rb"
+  },
+  {
+    "id": "q154",
+    "subject": "Mathematics",
+    "question": "What is the solution to tan(x) = 1?",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correctAnswer": "45°"
+  },
+  {
+    "id": "q155",
+    "subject": "Physics",
+    "question": "What is the unit of moment of inertia?",
+    "options": ["kg·m²", "N·m·s", "J·s", "W·s"],
+    "correctAnswer": "kg·m²"
+  },
+  {
+    "id": "q156",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for scandium?",
+    "options": ["Sc", "Sd", "Sn", "Sm"],
+    "correctAnswer": "Sc"
+  },
+  {
+    "id": "q157",
+    "subject": "Mathematics",
+    "question": "What is the solution to 2sin(x) = 1?",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correctAnswer": "30°"
+  },
+  {
+    "id": "q158",
+    "subject": "Physics",
+    "question": "What is the unit of angular momentum?",
+    "options": ["kg·m²/s", "N·m·s", "J·s", "All of the above"],
+    "correctAnswer": "All of the above"
+  },
+  {
+    "id": "q159",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for selenium?",
+    "options": ["Se", "Sl", "Sn", "Sm"],
+    "correctAnswer": "Se"
+  },
+  {
+    "id": "q160",
+    "subject": "Mathematics",
+    "question": "What is the solution to 2cos(x) = √2?",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correctAnswer": "45°"
+  },
+  {
+    "id": "q161",
+    "subject": "Physics",
+    "question": "What is the unit of torque?",
+    "options": ["N·m", "J", "W·s", "All of the above"],
+    "correctAnswer": "N·m"
+  },
+  {
+    "id": "q162",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for strontium?",
+    "options": ["St", "Sr", "Sm", "Sn"],
+    "correctAnswer": "Sr"
+  },
+  {
+    "id": "q163",
+    "subject": "Mathematics",
+    "question": "What is the solution to sin²(x) + cos²(x) = ?",
+    "options": ["0", "0.5", "1", "2"],
+    "correctAnswer": "1"
+  },
+  {
+    "id": "q164",
+    "subject": "Physics",
+    "question": "What is the unit of impulse?",
+    "options": ["N·s", "kg·m/s", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q165",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for titanium?",
+    "options": ["Ti", "Tm", "Tn", "Ta"],
+    "correctAnswer": "Ti"
+  },
+  {
+    "id": "q166",
+    "subject": "Mathematics",
+    "question": "What is the derivative of sin(x)?",
+    "options": ["cos(x)", "-cos(x)", "sin(x)", "-sin(x)"],
+    "correctAnswer": "cos(x)"
+  },
+  {
+    "id": "q167",
+    "subject": "Physics",
+    "question": "What is the unit of momentum?",
+    "options": ["kg·m/s", "N·s", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q168",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for vanadium?",
+    "options": ["Va", "V", "Vm", "Vn"],
+    "correctAnswer": "V"
+  },
+  {
+    "id": "q169",
+    "subject": "Mathematics",
+    "question": "What is the derivative of eˣ?",
+    "options": ["eˣ", "xeˣ", "eˣ/x", "0"],
+    "correctAnswer": "eˣ"
+  },
+  {
+    "id": "q170",
+    "subject": "Physics",
+    "question": "What is the unit of angular velocity?",
+    "options": ["rad/s", "deg/s", "rev/s", "All of the above"],
+    "correctAnswer": "rad/s"
+  },
+  {
+    "id": "q171",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for xenon?",
+    "options": ["Xe", "Xn", "Xo", "X"],
+    "correctAnswer": "Xe"
+  },
+  {
+    "id": "q172",
+    "subject": "Mathematics",
+    "question": "What is the derivative of ln(x)?",
+    "options": ["1/x", "x", "eˣ", "0"],
+    "correctAnswer": "1/x"
+  },
+  {
+    "id": "q173",
+    "subject": "Physics",
+    "question": "What is the unit of angular acceleration?",
+    "options": ["rad/s²", "deg/s²", "rev/s²", "All of the above"],
+    "correctAnswer": "rad/s²"
+  },
+  {
+    "id": "q174",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for yttrium?",
+    "options": ["Yt", "Y", "Ym", "Yu"],
+    "correctAnswer": "Y"
+  },
+  {
+    "id": "q175",
+    "subject": "Mathematics",
+    "question": "What is the integral of 1/x dx?",
+    "options": ["x", "ln(x)", "eˣ", "ln(x) + C"],
+    "correctAnswer": "ln(x) + C"
+  },
+  {
+    "id": "q176",
+    "subject": "Physics",
+    "question": "What is the unit of moment of force?",
+    "options": ["N·m", "J", "W·s", "All of the above"],
+    "correctAnswer": "N·m"
+  },
+  {
+    "id": "q177",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for zirconium?",
+    "options": ["Zi", "Zr", "Zn", "Zc"],
+    "correctAnswer": "Zr"
+  },
+  {
+    "id": "q178",
+    "subject": "Mathematics",
+    "question": "What is the integral of eˣ dx?",
+    "options": ["eˣ", "eˣ + C", "xeˣ", "eˣ/x"],
+    "correctAnswer": "eˣ + C"
+  },
+  {
+    "id": "q179",
+    "subject": "Physics",
+    "question": "What is the unit of gravitational constant?",
+    "options": ["N·m²/kg²", "m³/(kg·s²)", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q180",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for platinum?",
+    "options": ["Pl", "Pt", "Pm", "Pa"],
+    "correctAnswer": "Pt"
+  },
+  {
+    "id": "q181",
+    "subject": "Mathematics",
+    "question": "What is the integral of cos(x) dx?",
+    "options": ["sin(x)", "sin(x) + C", "-sin(x)", "-sin(x) + C"],
+    "correctAnswer": "sin(x) + C"
+  },
+  {
+    "id": "q182",
+    "subject": "Physics",
+    "question": "What is the unit of Planck's constant?",
+    "options": ["J·s", "eV·s", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q183",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for palladium?",
+    "options": ["Pl", "Pd", "Pm", "Pa"],
+    "correctAnswer": "Pd"
+  },
+  {
+    "id": "q184",
+    "subject": "Mathematics",
+    "question": "What is the integral of sin(x) dx?",
+    "options": ["cos(x)", "cos(x) + C", "-cos(x)", "-cos(x) + C"],
+    "correctAnswer": "-cos(x) + C"
+  },
+  {
+    "id": "q185",
+    "subject": "Physics",
+    "question": "What is the unit of Boltzmann constant?",
+    "options": ["J/K", "eV/K", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q186",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for rhodium?",
+    "options": ["Rh", "Rd", "Rm", "Ro"],
+    "correctAnswer": "Rh"
+  },
+  {
+    "id": "q187",
+    "subject": "Mathematics",
+    "question": "What is the integral of x² dx?",
+    "options": ["2x", "x³/3", "x³/3 + C", "2x + C"],
+    "correctAnswer": "x³/3 + C"
+  },
+  {
+    "id": "q188",
+    "subject": "Physics",
+    "question": "What is the unit of Stefan-Boltzmann constant?",
+    "options": ["W/(m²·K⁴)", "J/(m²·K⁴)", "Both A and B", "None of the above"],
+    "correctAnswer": "W/(m²·K⁴)"
+  },
+  {
+    "id": "q189",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for ruthenium?",
+    "options": ["Ru", "Rn", "Rh", "Rt"],
+    "correctAnswer": "Ru"
+  },
+  {
+    "id": "q190",
+    "subject": "Mathematics",
+    "question": "What is the integral of 1 dx?",
+    "options": ["0", "1", "x", "x + C"],
+    "correctAnswer": "x + C"
+  },
+  {
+    "id": "q191",
+    "subject": "Physics",
+    "question": "What is the unit of electric permittivity?",
+    "options": ["F/m", "C²/(N·m²)", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q192",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for technetium?",
+    "options": ["Tc", "Tn", "Te", "Tm"],
+    "correctAnswer": "Tc"
+  },
+  {
+    "id": "q193",
+    "subject": "Mathematics",
+    "question": "What is the derivative of x³?",
+    "options": ["2x²", "3x²", "x⁴/4", "3x"],
+    "correctAnswer": "3x²"
+  },
+  {
+    "id": "q194",
+    "subject": "Physics",
+    "question": "What is the unit of magnetic permeability?",
+    "options": ["N/A²", "H/m", "Both A and B", "None of the above"],
+    "correctAnswer": "Both A and B"
+  },
+  {
+    "id": "q195",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for antimony?",
+    "options": ["An", "At", "Sb", "Am"],
+    "correctAnswer": "Sb"
+  },
+  {
+    "id": "q196",
+    "subject": "Mathematics",
+    "question": "What is the derivative of √x?",
+    "options": ["1/√x", "1/(2√x)", "√x/2", "2√x"],
+    "correctAnswer": "1/(2√x)"
+  },
+  {
+    "id": "q197",
+    "subject": "Physics",
+    "question": "What is the unit of Rydberg constant?",
+    "options": ["m⁻¹", "Hz", "Both A and B", "None of the above"],
+    "correctAnswer": "m⁻¹"
+  },
+  {
+    "id": "q198",
+    "subject": "Chemistry",
+    "question": "What is the chemical symbol for arsenic?",
+    "options": ["Ar", "As", "An", "Ac"],
+    "correctAnswer": "As"
+  },
+  {
+    "id": "q199",
+    "subject": "Mathematics",
+    "question": "What is the derivative of 1/x?",
+    "options": ["1/x²", "-1/x²", "ln(x)", "-1/x² + C"],
+    "correctAnswer": "-1/x²"
+  },
+  {
+    "id": "q200",
+    "subject": "Physics",
+    "question": "What is the unit of Wien's displacement constant?",
+    "options": ["m·K", "K/m", "m/K", "None of the above"],
+    "correctAnswer": "m·K"
   }
 ]
