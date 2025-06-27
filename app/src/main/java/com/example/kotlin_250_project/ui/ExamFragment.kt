@@ -29,32 +29,34 @@ class ExamFragment : Fragment() {
     }
 
     private fun handleStartExam() {
-        // Get selected subject from Spinner
         val selectedSubject = binding.spinnerSubject.selectedItem.toString()
 
-        // Get selected marks from RadioGroup
         val selectedRadioId = binding.rgMarks.checkedRadioButtonId
-
         if (selectedRadioId == -1) {
             Toast.makeText(requireContext(), "Please select the marks.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val selectedMarksRadio = requireView().findViewById<RadioButton>(selectedRadioId)
-        val selectedMarks = selectedMarksRadio.text.toString().replace("[^0-9]".toRegex(), "").toInt()
+        val selectedMarksRadio = binding.root.findViewById<RadioButton>(selectedRadioId)
+        val selectedMarksText = selectedMarksRadio.text.toString()
+        val selectedMarks = selectedMarksText.replace("[^0-9]".toRegex(), "").toIntOrNull()
 
-        // Optional: validate Spinner selection (if your first item is like "Select a subject")
+        if (selectedMarks == null) {
+            Toast.makeText(requireContext(), "Invalid marks selection.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         if (selectedSubject == "Select a subject") {
             Toast.makeText(requireContext(), "Please select a subject.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Now you have both values
-        Toast.makeText(requireContext(), "Subject: $selectedSubject, Marks: $selectedMarks", Toast.LENGTH_LONG).show()
+        val intent = Intent(requireContext(), QuizActivity::class.java).apply {
+            putExtra("subject", selectedSubject)
+            putExtra("marks", selectedMarks)
+        }
 
-        // TODO: Navigate to QuizFragment or pass data
-            startActivity(Intent(requireContext(), QuizActivity::class.java))
-
+        startActivity(intent)
     }
 
     override fun onDestroyView() {

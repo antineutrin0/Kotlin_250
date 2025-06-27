@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background">
 
-    <!-- Full content area (LinearLayout inside ScrollView) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,93 +12,85 @@
         android:paddingTop="72dp"
         android:padding="16dp">
 
-        <!-- Scrollable content area -->
-        <ScrollView
+        <!-- Remove ScrollView -->
+
+        <!-- Empty view shown when no bookmarks -->
+        <LinearLayout
+            android:id="@+id/emptyAchievementsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:alpha="0.5"
+                android:src="@drawable/ic_bookmark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Nothing To Show Yet"
+                android:textColor="#666666"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Add a bookmark to this page"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewBookmarks"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/white"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp">
+            android:nestedScrollingEnabled="true" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="72dp"
-                android:id="@+id/bookmarksContainer">
-
-                <!-- Empty message block -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:id="@+id/emptyAchievementsLayout">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/ic_bookmark"
-                        android:layout_marginBottom="16dp"
-                        android:alpha="0.5" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Nothing To Show Yet"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="#666666"
-                        android:layout_marginBottom="8dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add a bookmark to this page"
-                        android:textSize="14sp"
-                        android:textColor="#999999"
-                        android:gravity="center" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </ScrollView>
     </LinearLayout>
 
-    <!-- Header on top of everything -->
+    <!-- Header on top -->
     <LinearLayout
         android:id="@+id/header_Layout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:orientation="horizontal"
         android:background="@drawable/header_gradient"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:elevation="6dp"
         android:gravity="center_vertical"
-        android:elevation="6dp">
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
 
         <ImageButton
             android:id="@+id/btnBackBookmarks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/back_btn"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
             android:contentDescription="Go back"
+            android:padding="8dp"
+            android:src="@drawable/back_btn"
             app:tint="@android:color/white" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="BookMarks"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="@android:color/white"
-            android:gravity="center" />
-
-
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
+
 </FrameLayout>

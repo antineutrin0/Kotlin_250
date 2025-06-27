@@ -67,8 +67,14 @@
             android:exported="true"/>
         <activity android:name=".ui.MyCoursesActivity"
             android:exported="true"/>
-
+        <activity android:name=".ui.QuizActivity"
+            android:exported="true"/>
+        <activity android:name=".ui.ShowResultActivity"
+            android:exported="true"/>
+        <activity android:name=".ui.WrongAnswersActivity"
+            android:exported="true"/>
 
     </application>
 
 </manifest>
+

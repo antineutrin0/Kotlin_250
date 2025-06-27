@@ -1,40 +1,62 @@
 package com.example.kotlin_250_project.ui
 
-import ResultModel
+import ExamResult
+import ResultAdapter
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_250_project.R
-
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class ResultActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
+    private val firestore = FirebaseFirestore.getInstance()
+    private val auth = FirebaseAuth.getInstance()
+
+    private val resultsList = mutableListOf<ExamResult>()
     private lateinit var adapter: ResultAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.result_activity)
+        setContentView(R.layout.result_activity) // your XML layout file with recycler_results RecyclerView
 
-        recyclerView = findViewById(R.id.recycler_results)
+        recyclerView = findViewById(R.id.activity_results)
+        adapter = ResultAdapter(resultsList)
         recyclerView.layoutManager = LinearLayoutManager(this)
-
-        val resultList = listOf(
-            ResultModel("Physics", "80 / 100", "A++", "PASS"),
-            ResultModel("English", "75 / 100", "A+", "PASS"),
-            ResultModel("Bangla", "90 / 100", "A++", "PASS"),
-            ResultModel("Chemistry", "75 / 100", "A+", "PASS"),
-            ResultModel("Math", "82 / 100", "A+", "PASS"),
-            ResultModel("Biology", "75 / 100", "A+", "PASS")
-        )
-
-        adapter = ResultAdapter(resultList)
         recyclerView.adapter = adapter
 
-        findViewById<ImageView>(R.id.back_arrow).setOnClickListener {
-            finish()
-        }
+        val backArrow = findViewById<ImageView>(R.id.back_arrow)
+        backArrow.setOnClickListener { finish() }
+
+        fetchResults()
+    }
+
+    private fun fetchResults() {
+        val userId = auth.currentUser?.uid ?: return
+
+        firestore.collection("Users")
+            .document(userId)
+            .collection("Results")
+            .orderBy("timestamp")
+            .get()
+            .addOnSuccessListener { snapshot ->
+                resultsList.clear()
+                for (doc in snapshot.documents) {
+                    val result = doc.toObject(ExamResult::class.java)
+                    if (result != null) {
+                        resultsList.add(result)
+                    }
+                }
+
+                adapter.notifyDataSetChanged()
+            }
+            .addOnFailureListener {
+                // handle failure e.g. Toast
+            }
     }
 }

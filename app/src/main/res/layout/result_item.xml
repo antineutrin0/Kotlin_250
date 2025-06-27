@@ -18,6 +18,17 @@
         android:textColor="#FF5722"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+
+    <!-- Exam Date TextView -->
+    <TextView
+        android:id="@+id/examDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date: 01 Jan 2025"
+        android:textColor="#757575"
+        android:textSize="14sp"
         android:layout_marginBottom="8dp" />
 
     <LinearLayout
