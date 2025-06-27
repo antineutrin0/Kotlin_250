@@ -53,7 +53,7 @@ class ExamFragment : Fragment() {
         Toast.makeText(requireContext(), "Subject: $selectedSubject, Marks: $selectedMarks", Toast.LENGTH_LONG).show()
 
         // TODO: Navigate to QuizFragment or pass data
-            startActivity(Intent(requireContext(), QuizFragment::class.java))
+            startActivity(Intent(requireContext(), QuizActivity::class.java))
 
     }
 

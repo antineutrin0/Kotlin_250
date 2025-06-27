@@ -1,23 +1,24 @@
 package com.example.kotlin_250_project.ui
 
-import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.google.gson.Gson
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.kotlin_250_project.databinding.FragmentQuizBinding
+import com.example.kotlin_250_project.databinding.ActivityQuizBinding
 import java.io.InputStreamReader
 
-class QuizFragment : AppCompatActivity() {
+class QuizActivity : AppCompatActivity() {
 
-    private lateinit var binding: FragmentQuizBinding
+    private lateinit var binding: ActivityQuizBinding
     private lateinit var questions: List<Question>
     private lateinit var adapter: QuestionAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = FragmentQuizBinding.inflate(layoutInflater)
+        binding = ActivityQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         loadQuestionsFromJson()
@@ -26,12 +27,21 @@ class QuizFragment : AppCompatActivity() {
     }
 
     private fun loadQuestionsFromJson() {
-        val inputStream = assets.open("questions.json")
-        val reader = InputStreamReader(inputStream)
-        val questionListType = object : TypeToken<List<Question>>() {}.type
-        questions = Gson().fromJson(reader, questionListType)
-        reader.close()
+        try {
+            val inputStream = assets.open("questions.json")
+            val reader = InputStreamReader(inputStream)
+
+            val questionListType = object : com.google.gson.reflect.TypeToken<List<Question>>() {}.type
+            questions = Gson().fromJson(reader, questionListType)
+
+            reader.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "Error loading questions: ${e.message}", Toast.LENGTH_LONG).show()
+        }
     }
+
+
 
     private fun setupRecyclerView() {
         adapter = QuestionAdapter(questions)
@@ -44,10 +54,10 @@ class QuizFragment : AppCompatActivity() {
             val selectedAnswers = adapter.selectedAnswers
 
             if (selectedAnswers.size < questions.size) {
-                android.widget.Toast.makeText(
+                Toast.makeText(
                     this,
                     "Please answer all questions",
-                    android.widget.Toast.LENGTH_SHORT
+                    Toast.LENGTH_SHORT
                 ).show()
                 return@setOnClickListener
             }
@@ -60,10 +70,10 @@ class QuizFragment : AppCompatActivity() {
                 }
             }
 
-            android.widget.Toast.makeText(
+            Toast.makeText(
                 this,
                 "You scored $score out of ${questions.size}",
-                android.widget.Toast.LENGTH_LONG
+                Toast.LENGTH_LONG
             ).show()
         }
     }

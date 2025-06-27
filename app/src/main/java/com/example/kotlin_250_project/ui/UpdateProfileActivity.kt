@@ -43,7 +43,6 @@ class UpdateProfileActivity : AppCompatActivity() {
                 if (document != null && document.exists()) {
                     // Set basic info
                     binding.etFullName.setText(document.getString("fullName"))
-                    binding.etEmail.setText(document.getString("email"))
                     binding.etnumber.setText(document.getString("number"))
                     binding.etInstitute.setText(document.getString("institute"))
                     binding.etprofileUrl.setText(document.getString("profileUrl"))
@@ -80,7 +79,6 @@ class UpdateProfileActivity : AppCompatActivity() {
 
         val updatedData = mapOf(
             "fullName" to binding.etFullName.text.toString(),
-            "email" to binding.etEmail.text.toString(),
             "number" to binding.etnumber.text.toString(),
             "institute" to binding.etInstitute.text.toString(),
             "profileUrl" to binding.etprofileUrl.text.toString(),
