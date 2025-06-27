@@ -81,7 +81,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="701dp"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -91,45 +91,33 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="6dp"
+                    android:layout_marginBottom="24dp"
                     android:max="100"
                     android:progress="0"
-                    android:progressDrawable="@drawable/progress_drawable"
-                    android:layout_marginBottom="24dp" />
+                    android:progressDrawable="@drawable/progress_drawable" />
 
                 <!-- Personal Info Section Title -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Personal Information"
-                    android:textColor="@color/section_title"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"
                     android:drawableStart="@drawable/ic_person"
                     android:drawablePadding="8dp"
                     android:drawableTint="@color/primary_color"
-                    android:layout_marginBottom="12dp" />
+                    android:text="Personal Information"
+                    android:textColor="@color/section_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                <!-- Full Name -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Enter Full Name"
-                    app:boxStrokeColor="@color/primary_color"
-                    android:layout_marginBottom="12dp">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etFullName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName" />
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <!--  Number -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
                     android:hint="Phone Number"
-                    app:boxStrokeColor="@color/primary_color"
-                    android:layout_marginBottom="12dp">
+                    app:boxStrokeColor="@color/primary_color">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etnumber"
                         android:layout_width="match_parent"
@@ -137,27 +125,15 @@
                         android:inputType="phone" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Email -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="E-mail"
-                    app:boxStrokeColor="@color/primary_color"
-                    android:layout_marginBottom="12dp">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etEmail"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress" />
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Institute -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
                     android:hint="Institute"
-                    app:boxStrokeColor="@color/primary_color"
-                    android:layout_marginBottom="12dp">
+                    app:boxStrokeColor="@color/primary_color">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etInstitute"
                         android:layout_width="match_parent"
@@ -169,9 +145,10 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
                     android:hint="profileUrl"
-                    app:boxStrokeColor="@color/primary_color"
-                    android:layout_marginBottom="12dp">
+                    app:boxStrokeColor="@color/primary_color">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etprofileUrl"
                         android:layout_width="match_parent"
@@ -183,43 +160,46 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
                     android:text="Gender"
-                    android:textStyle="bold"
                     android:textColor="@color/text_primary"
-                    android:layout_marginBottom="4dp" />
+                    android:textStyle="bold" />
+
                 <RadioGroup
                     android:id="@+id/genderRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
                     <RadioButton
                         android:id="@+id/rbMale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Male"
-                        android:buttonTint="@color/primary_color" />
+                        android:buttonTint="@color/primary_color"
+                        android:text="Male" />
+
                     <RadioButton
                         android:id="@+id/rbFemale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Female"
+                        android:layout_marginStart="24dp"
                         android:buttonTint="@color/primary_color"
-                        android:layout_marginStart="24dp" />
+                        android:text="Female" />
                 </RadioGroup>
 
                 <!-- Education Details Title -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Education Details"
-                    android:textColor="@color/section_title"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"
                     android:drawableStart="@drawable/ic_education"
                     android:drawablePadding="8dp"
                     android:drawableTint="@color/primary_color"
-                    android:layout_marginBottom="12dp" />
+                    android:text="Education Details"
+                    android:textColor="@color/section_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <!-- SSC & HSC Fields -->
                 <LinearLayout
@@ -231,27 +211,31 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="8dp">
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="SSC Board">
+
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/etSSCBoard"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
-                        <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                        <Space
+                            android:layout_width="8dp"
+                            android:layout_height="wrap_content" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="SSC Year">
+
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/etSSCYear"
                                 android:layout_width="match_parent"
@@ -263,27 +247,31 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="16dp">
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="HSC Board">
+
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/etHSCBoard"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
-                        <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                        <Space
+                            android:layout_width="8dp"
+                            android:layout_height="wrap_content" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="HSC Year">
+
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/etHSCYear"
                                 android:layout_width="match_parent"
@@ -304,7 +292,14 @@
                     android:textStyle="bold"
                     app:cornerRadius="30dp"
                     app:elevation="6dp" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>
+
+
+
+
+
+
