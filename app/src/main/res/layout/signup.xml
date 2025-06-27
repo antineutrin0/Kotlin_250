@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@drawable/gradient_background"
-    tools:context=".ui.SignUpActivity">
+    tools:context=".ui.SignupActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

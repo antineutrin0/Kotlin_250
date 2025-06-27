@@ -35,18 +35,18 @@
                 android:background="@android:color/transparent"
                 android:src="@drawable/back_btn"
                 android:contentDescription="Back"
-                android:tint="#000000" />
+                app:tint="#000000" />
 
             <!-- Top Icon Centered -->
             <ImageView
                 android:id="@+id/profileIcon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/circle_background"
                 android:contentDescription="Profile Icon"
-                android:padding="16dp"
+                android:padding="12dp"
                 android:src="@drawable/ic_person" />
         </RelativeLayout>
 
@@ -60,7 +60,7 @@
             android:textColor="@color/black"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="0dp" />
 
         <!-- Subtitle -->
         <TextView
@@ -81,7 +81,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="701dp"
+                android:layout_height="729dp"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -91,7 +91,7 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="6dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="12dp"
                     android:max="100"
                     android:progress="0"
                     android:progressDrawable="@drawable/progress_drawable" />
