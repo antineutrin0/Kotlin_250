@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient_background"
     android:padding="16dp">
 
@@ -11,29 +12,49 @@
         android:orientation="vertical">
 
         <!-- Header -->
+        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:background="@drawable/header_gradient"
-            android:padding="24dp"
-            android:gravity="center">
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:baselineAligned="false">
 
+            <!-- Back button -->
+            <ImageView
+                android:id="@+id/backarrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_btn"
+                android:contentDescription="Back"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="center_vertical"
+                app:tint="@android:color/white" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Title -->
             <TextView
+                android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="📊 Student Report Card"
                 android:textColor="@android:color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Track your academic progress and exam performance"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp" />
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <!-- Statistic Cards in vertical layout -->

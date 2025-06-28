@@ -5,68 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background">
 
-    <!-- Full content area (LinearLayout inside ScrollView) -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="72dp"
-        android:padding="16dp">
-
-        <!-- Scrollable content area -->
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/achievementsContainer">
-
-                <!-- Empty message block -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:id="@+id/emptyAchievementsLayout">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/ic_achievement_empty"
-                        android:layout_marginBottom="16dp"
-                        android:alpha="0.5" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No Achievements Yet"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#666666"
-                        android:layout_marginBottom="8dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Complete tasks to unlock achievements"
-                        android:textSize="14sp"
-                        android:textColor="#999999"
-                        android:gravity="center" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
-    <!-- Header on top of everything -->
+    <!-- Header bar (placed first so it overlays properly) -->
     <LinearLayout
         android:id="@+id/headerLayout"
         android:layout_width="match_parent"
@@ -82,22 +21,77 @@
             android:id="@+id/btnBackAchievements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/back_btn"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
             android:contentDescription="Go back"
+            android:padding="8dp"
+            android:src="@drawable/back_btn"
             app:tint="@android:color/white" />
 
-<TextView
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:text="Achievements"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    android:textColor="@android:color/white"
-    android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Achievements"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+    </LinearLayout>
 
-</LinearLayout>
-    </FrameLayout>
+    <!-- Main content area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="56dp"> <!-- Ensures content is below header -->
+
+        <!-- RecyclerView for achievements list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAchievements"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:background="#FFFFFF" />
+
+        <!-- Empty state message -->
+        <LinearLayout
+            android:id="@+id/emptyAchievementsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:alpha="0.5"
+                android:src="@drawable/ic_achievement_empty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="No Achievements Yet"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Complete tasks to unlock achievements"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

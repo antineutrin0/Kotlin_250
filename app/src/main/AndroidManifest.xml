@@ -73,7 +73,12 @@
             android:exported="true"/>
         <activity android:name=".ui.WrongAnswersActivity"
             android:exported="true"/>
-
+        <activity android:name=".ui.AiChatActivity"
+            android:exported="true"/>
+        <activity android:name=".ui.AchievementActivity"
+            android:exported="true"/>
+        <activity android:name=".ui.ReportCardActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

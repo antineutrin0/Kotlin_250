@@ -99,10 +99,9 @@ class UpdateProfileActivity : AppCompatActivity() {
                     userDocRef.update(updatedData)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
-                            // Optionally redirect or finish
-                            val intent = Intent(this, HomeFragment::class.java)
-                            startActivity(intent)
+                            setResult(RESULT_OK) // let the caller know update happened
                             finish()
+
                         }
                         .addOnFailureListener {
                             Toast.makeText(this, "Update failed: ${it.message}", Toast.LENGTH_SHORT).show()
@@ -111,11 +110,12 @@ class UpdateProfileActivity : AppCompatActivity() {
                     // Create new document
                     userDocRef.set(updatedData)
                         .addOnSuccessListener {
-                            Toast.makeText(this, "Profile created successfully", Toast.LENGTH_SHORT).show()
-                            // Optionally redirect or finish
-                            val intent = Intent(this, HomeFragment::class.java)
+                            Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, HomeScreenActivity::class.java)
+                            // Optional: clear back stack so user can't go back to login
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                             startActivity(intent)
-                             finish()
+                            finish()
                         }
                         .addOnFailureListener {
                             Toast.makeText(this, "Failed to create profile: ${it.message}", Toast.LENGTH_SHORT).show()

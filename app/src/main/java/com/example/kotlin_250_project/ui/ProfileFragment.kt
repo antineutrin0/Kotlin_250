@@ -32,6 +32,16 @@ class ProfileFragment : Fragment() {
         firestore = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()
 
+        // Back button behavior override
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                // Navigate back to HomeFragment
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.nav_host_fragment, HomeFragment()) // use your container id
+                    .commit()
+            }
+        })
+
         loadUserProfile()
         setupClickListeners()
 
@@ -80,9 +90,8 @@ class ProfileFragment : Fragment() {
             showLogoutConfirmationDialog()
         }
 
-
         binding.educationInfoLayout.setOnClickListener {
-            startActivity(Intent(requireContext(),EducationInfoActivity::class.java))
+            startActivity(Intent(requireContext(), EducationInfoActivity::class.java))
         }
 
         binding.myresult.setOnClickListener {
@@ -100,28 +109,20 @@ class ProfileFragment : Fragment() {
         binding.notificationIcon.setOnClickListener {
             startActivity(Intent(requireContext(), NotificationActivity::class.java))
         }
-
-        // You may remove bottomNavigationView handling from here if it's being handled globally
     }
 
     private fun showLogoutConfirmationDialog() {
-        val dialogView = layoutInflater.inflate(R.layout.dialogue_logout, null) // Replace with your dialog layout filename without .xml extension
+        val dialogView = layoutInflater.inflate(R.layout.dialogue_logout, null)
         val dialog = android.app.AlertDialog.Builder(requireContext())
             .setView(dialogView)
             .create()
 
-        // Get views from the dialog layout
         val btnCancel = dialogView.findViewById<Button>(R.id.btn_cancel)
         val btnLogout = dialogView.findViewById<Button>(R.id.btn_logout)
         val ivClose = dialogView.findViewById<ImageView>(R.id.iv_close_button)
 
-        btnCancel.setOnClickListener {
-            dialog.dismiss()
-        }
-
-        ivClose.setOnClickListener {
-            dialog.dismiss()
-        }
+        btnCancel.setOnClickListener { dialog.dismiss() }
+        ivClose.setOnClickListener { dialog.dismiss() }
 
         btnLogout.setOnClickListener {
             auth.signOut()
@@ -134,9 +135,14 @@ class ProfileFragment : Fragment() {
         dialog.show()
     }
 
+    override fun onResume() {
+        super.onResume()
+        loadUserProfile()
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 }
+

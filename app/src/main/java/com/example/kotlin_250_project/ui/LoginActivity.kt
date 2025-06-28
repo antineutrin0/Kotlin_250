@@ -44,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
         // Navigate to SignUpActivity
         binding.tvSignUp.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
+            finish()
         }
         binding.btnBack.setOnClickListener {
             startActivity(Intent(this, WelcomeActivity::class.java))
@@ -57,14 +58,17 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user = mAuth.currentUser
                     Toast.makeText(baseContext, "Welcome ${user?.email}", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, HomeFragment::class.java)
+                    // Start the Activity that hosts HomeFragment
+                    val intent = Intent(this, HomeScreenActivity::class.java)
+                    // Optional: clear back stack so user can't go back to login
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
-
-//                    finish()
+                    finish()
                 } else {
                     Log.w("SignInActivity", "signInWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
                 }
             }
     }
+
 }

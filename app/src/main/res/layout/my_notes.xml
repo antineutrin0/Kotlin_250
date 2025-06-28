@@ -19,7 +19,7 @@
             android:src="@drawable/back_btn"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:padding="8dp"
-            android:id="@+id/btnBackMain"
+            android:id="@+id/btnBack"
             android:contentDescription="Go back" />
 
         <TextView

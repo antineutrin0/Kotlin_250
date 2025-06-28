@@ -132,6 +132,7 @@ class QuizActivity : AppCompatActivity() {
         intent.putExtra("wrongQuestions", Gson().toJson(wrongQuestions))
         intent.putExtra("selectedAnswers", Gson().toJson(selectedAnswers))
         startActivity(intent)
+        finish()
     }
 
 

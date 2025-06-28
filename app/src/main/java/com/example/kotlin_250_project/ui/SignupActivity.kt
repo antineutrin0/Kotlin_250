@@ -44,10 +44,12 @@ class SignupActivity : AppCompatActivity() {
         binding.tvSignIn.setOnClickListener({
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         })
         binding.btnBack.setOnClickListener({
             val intent = Intent(this, WelcomeActivity::class.java)
             startActivity(intent)
+            finish()
         })
 
     }

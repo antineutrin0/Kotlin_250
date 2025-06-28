@@ -8,7 +8,6 @@ import com.example.kotlin_250_project.databinding.ResultShowBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
-import java.util.*
 
 class ShowResultActivity : AppCompatActivity() {
 
@@ -29,15 +28,15 @@ class ShowResultActivity : AppCompatActivity() {
         val obtainedMarks = intent.getIntExtra("obtainedMarks", 0)
         val totalQuestions = intent.getIntExtra("totalQuestions", 0)
         val correctAnswers = intent.getIntExtra("correctAnswers", 0)
-
+        val wrongAnswers = totalQuestions - correctAnswers
+        val percentage = if (totalMarks != 0) (obtainedMarks * 100) / totalMarks else 0
         val wrongAnswersListJson = intent.getStringExtra("wrongQuestions")
         val selectedAnswersJson = intent.getStringExtra("selectedAnswers")
-
+        saveResultToFirestore(subject, totalMarks, obtainedMarks, percentage)
         wrongQuestions = Gson().fromJson(wrongAnswersListJson, Array<Question>::class.java).toList()
         selectedAnswers = Gson().fromJson(selectedAnswersJson, Map::class.java) as Map<String, String>
 
-        val wrongAnswers = totalQuestions - correctAnswers
-        val percentage = if (totalMarks != 0) (obtainedMarks * 100) / totalMarks else 0
+
 
         // UI update
         binding.examTitle.text = subject
@@ -60,38 +59,62 @@ class ShowResultActivity : AppCompatActivity() {
 
             if (wrongQuestionsJson != null && selectedAnswersJson != null) {
                 val intent = Intent(this, WrongAnswersActivity::class.java)
-                intent.putExtra("wrongQuestions", wrongQuestionsJson)   // Changed key to "wrongQuestions"
-                intent.putExtra("wrongAnswersMap", selectedAnswersJson) // Keep as "wrongAnswersMap"
+                intent.putExtra("wrongQuestions", wrongQuestionsJson)
+                intent.putExtra("wrongAnswersMap", selectedAnswersJson)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "No review data available", Toast.LENGTH_SHORT).show()
             }
         }
 
-
-
-        saveResultToFirestore(subject, totalMarks, obtainedMarks)
     }
 
-    private fun saveResultToFirestore(subject: String, totalMarks: Int, obtainedMarks: Int) {
+    private fun saveResultToFirestore(subject: String, totalMarks: Int, obtainedMarks: Int, percentage: Int) {
         val userId = auth.currentUser?.uid ?: return
+        val timestamp = System.currentTimeMillis()
 
         val resultData = mapOf(
             "subject" to subject,
             "totalMarks" to totalMarks,
             "obtainedMarks" to obtainedMarks,
-            "timestamp" to System.currentTimeMillis()
+            "timestamp" to timestamp
         )
 
+        // Save to Results
         firestore.collection("Users")
             .document(userId)
             .collection("Results")
             .add(resultData)
             .addOnSuccessListener {
-                // success
+
+                // If percentage >= 80, also save to Achievements
+                if (percentage >= 80) {
+                    saveAchievement(userId, subject, obtainedMarks, totalMarks, timestamp)
+                }
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Failed to save result", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun saveAchievement(userId: String, subject: String, obtainedMarks: Int, totalMarks: Int, timestamp: Long) {
+        val achievementData = mapOf(
+            "subject" to subject,
+            "obtainedMarks" to obtainedMarks,
+            "totalMarks" to totalMarks,
+            "timestamp" to timestamp,
+            "message" to "Scored $obtainedMarks out of $totalMarks in $subject! 🎉"
+        )
+
+        firestore.collection("Users")
+            .document(userId)
+            .collection("Achievements")
+            .add(achievementData)
+            .addOnSuccessListener {
+                Toast.makeText(this, "🎉 Achievement unlocked!", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Failed to save achievement", Toast.LENGTH_SHORT).show()
             }
     }
 }

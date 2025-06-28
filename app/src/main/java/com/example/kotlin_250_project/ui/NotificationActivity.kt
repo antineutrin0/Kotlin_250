@@ -33,6 +33,10 @@ class NotificationActivity : AppCompatActivity() {
             binding.recyclerNotifications.layoutManager = LinearLayoutManager(this)
             binding.recyclerNotifications.adapter = adapter
         }
+        binding.btnBackAchievements.setOnClickListener {
+         finish()
+        }
+
 
         // Tab click functionality
         binding.tabAll.setOnClickListener {

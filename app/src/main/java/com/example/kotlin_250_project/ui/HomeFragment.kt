@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlin_250_project.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment() {
@@ -19,7 +20,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var adapter: CourseAdapter
-    private var courseList = mutableListOf<Course>()
+    private val courseList = mutableListOf<Course>()
     private val firestore = FirebaseFirestore.getInstance()
     private val auth = FirebaseAuth.getInstance()
     private var enrolledCourses: List<String> = emptyList()
@@ -29,6 +30,32 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        // Set button listeners
+        binding.mycourses.setOnClickListener {
+            startActivity(Intent(requireContext(), MyCoursesActivity::class.java))
+        }
+
+        binding.mynotes.setOnClickListener {
+            startActivity(Intent(requireContext(), NotesActivity::class.java))
+        }
+
+        binding.myreports.setOnClickListener {
+            startActivity(Intent(requireContext(), ReportCardActivity::class.java))
+        }
+
+        binding.myresults.setOnClickListener {
+            startActivity(Intent(requireContext(), ResultActivity::class.java))
+        }
+
+        binding.myprogress.setOnClickListener {
+            startActivity(Intent(requireContext(), ProgressActivity::class.java))
+        }
+
+        binding.myacheievements.setOnClickListener {
+            startActivity(Intent(requireContext(), AchievementActivity::class.java))
+        }
+
         return binding.root
     }
 
@@ -39,11 +66,19 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadUserEnrolledCourses() {
-        val uid = auth.currentUser?.uid ?: return
+        val uid = auth.currentUser?.uid
+        if (uid == null) {
+            Toast.makeText(requireContext(), "User not logged in", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         firestore.collection("Users").document(uid).get()
             .addOnSuccessListener { document ->
                 enrolledCourses = document.get("courses") as? List<String> ?: emptyList()
                 loadCourses()
+            }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Failed to load enrolled courses", Toast.LENGTH_SHORT).show()
             }
     }
 
@@ -60,7 +95,6 @@ class HomeFragment : Fragment() {
                     courses = courseList,
                     enrolledCourseIds = enrolledCourses,
                     onPlayClick = { course ->
-                        //  Prevent access if user is not enrolled
                         if (enrolledCourses.contains(course.id)) {
                             val intent = Intent(requireContext(), CoursePlayerActivity::class.java)
                             intent.putExtra("videoUrl", course.videoUrl)
@@ -75,22 +109,23 @@ class HomeFragment : Fragment() {
                     },
                     onEnrollClick = { courseId ->
                         val uid = auth.currentUser?.uid ?: return@CourseAdapter
-                        firestore.collection("Users")
-                            .document(uid)
-                            .update("courses", com.google.firebase.firestore.FieldValue.arrayUnion(courseId))
+                        firestore.collection("Users").document(uid)
+                            .update("courses", FieldValue.arrayUnion(courseId))
                             .addOnSuccessListener {
                                 enrolledCourses = enrolledCourses + courseId
                                 adapter.updateEnrolledCourses(enrolledCourses)
+                            }
+                            .addOnFailureListener {
+                                Toast.makeText(requireContext(), "Failed to enroll", Toast.LENGTH_SHORT).show()
                             }
                     }
                 )
 
                 binding.coursesRecyclerView.adapter = adapter
             }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Failed to load courses", Toast.LENGTH_SHORT).show()
+            }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }

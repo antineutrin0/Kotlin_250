@@ -66,7 +66,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Overall Progress"
+                android:text="Overall Progress in Last 7 Exams"
                 android:textColor="@color/notification_title"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -80,7 +80,7 @@
                 android:layout_marginBottom="16dp">
 
                 <ProgressBar
-                    android:id="@+id/overall_progress_circular"
+                    android:id="@+id/overallProgressBar"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
@@ -109,7 +109,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Complete"
+                        android:text="Avg Marks"
                         android:textColor="@color/notification_title"
                         android:textSize="12sp" />
 
@@ -135,6 +135,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="12"
+                        android:id="@+id/tv_correct_answers"
                         android:textColor="@color/notification_title"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -142,7 +143,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Completed"
+                        android:text="Correct Answer"
                         android:textColor="@color/green_primary"
                         android:textSize="12sp" />
 
@@ -159,6 +160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4"
+                        android:id="@+id/tv_wrong_answers"
                         android:textColor="@color/notification_title"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -166,7 +168,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Remaining"
+                        android:text="Wrong Answer"
                         android:textColor="@color/notification_error"
                         android:textSize="12sp" />
 
@@ -183,6 +185,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="A+"
+                        android:id="@+id/tv_grade"
                         android:textColor="@color/notification_title"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -190,7 +193,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Average"
+                        android:text="Average Grade"
                         android:textColor="@color/physics_color"
                         android:textSize="12sp" />
 
@@ -235,8 +238,8 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@drawable/ic_math"
-                    android:tint="@color/math_color"
-                    android:layout_marginEnd="12dp" />
+                    android:layout_marginEnd="12dp"
+                    app:tint="@color/math_color" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -255,7 +258,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chapter 8 of 12"
+                        android:text="Obtained Marks in Percentage"
                         android:textColor="@color/notification_message"
                         android:textSize="12sp" />
 
@@ -265,6 +268,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="67%"
+                    android:id="@+id/math_percentagetext"
                     android:textColor="@color/math_color"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -276,6 +280,7 @@
                 android:layout_height="8dp"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:progress="67"
+                android:id="@+id/mathPercentage"
                 android:max="100"
                 android:progressDrawable="@drawable/math_progress_drawable" />
 
@@ -301,11 +306,11 @@
                 android:layout_marginBottom="8dp">
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
                     android:src="@drawable/ic_physics"
-                    android:tint="@color/physics_color"
-                    android:layout_marginEnd="12dp" />
+                    app:tint="@color/physics_color" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -324,7 +329,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chapter 9 of 10"
+                        android:text="Obtained Marks in Percentage"
                         android:textColor="@color/notification_message"
                         android:textSize="12sp" />
 
@@ -334,6 +339,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="90%"
+                    android:id="@+id/physics_percentagetext"
                     android:textColor="@color/physics_color"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -345,6 +351,7 @@
                 android:layout_height="8dp"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:progress="90"
+                android:id="@+id/physicsPercentage"
                 android:max="100"
                 android:progressDrawable="@drawable/physics_progress_drawable" />
 
@@ -373,8 +380,8 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@drawable/ic_chemistry"
-                    android:tint="@color/chemistry_color"
-                    android:layout_marginEnd="12dp" />
+                    android:layout_marginEnd="12dp"
+                    app:tint="@color/chemistry_color" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -393,7 +400,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chapter 5 of 8"
+                        android:text="Obtained Marks in Percentage"
                         android:textColor="@color/notification_message"
                         android:textSize="12sp" />
 
@@ -403,6 +410,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="62%"
+                    android:id="@+id/chemistry_percentagetext"
                     android:textColor="@color/chemistry_color"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -414,200 +422,15 @@
                 android:layout_height="8dp"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:progress="62"
+                android:id="@+id/chemistryPercentage"
                 android:max="100"
                 android:progressDrawable="@drawable/chemistry_progress_drawable" />
 
         </LinearLayout>
 
         <!-- English Progress -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/subject_progress_background"
-            android:elevation="2dp"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:clickable="true"
-            android:focusable="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_english"
-                    android:tint="@color/english_color"
-                    android:layout_marginEnd="12dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="English"
-                        android:textColor="@color/notification_title"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Chapter 12 of 15"
-                        android:textColor="@color/notification_message"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="80%"
-                    android:textColor="@color/english_color"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <ProgressBar
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:progress="80"
-                android:max="100"
-                android:progressDrawable="@drawable/english_progress_drawable" />
-
-        </LinearLayout>
 
         <!-- Weekly Goals Section -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Weekly Goals"
-            android:textColor="@color/notification_title"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="12dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/card_background"
-            android:elevation="2dp"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Study Hours Goal -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Study Hours"
-                        android:textColor="@color/notification_title"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="32 / 40 hours"
-                        android:textColor="@color/notification_message"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="80%"
-                    android:textColor="@color/chemistry_color"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <ProgressBar
-                android:layout_width="match_parent"
-                android:layout_height="6dp"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:progress="80"
-                android:max="100"
-                android:progressDrawable="@drawable/goal_progress_drawable"
-                android:layout_marginBottom="16dp" />
-
-            <!-- Assignments Goal -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Assignments"
-                        android:textColor="@color/notification_title"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="7 / 8 completed"
-                        android:textColor="@color/notification_message"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="87%"
-                    android:textColor="@color/english_color"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <ProgressBar
-                android:layout_width="match_parent"
-                android:layout_height="6dp"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:progress="87"
-                android:max="100"
-                android:progressDrawable="@drawable/assignment_progress_drawable" />
-
-        </LinearLayout>
 
     </LinearLayout>
 
